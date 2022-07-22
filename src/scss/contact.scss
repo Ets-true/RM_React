@@ -1,0 +1,204 @@
+@import "mixin.scss";
+
+body{
+    background-color: #FFFFFA;
+    width: auto;
+    height: auto;
+}
+.contacts__content {
+    margin: auto;
+    @include paddingTop(79);
+    display: flex;
+    @include height(848);
+    position: relative;
+    max-width: 2000px;
+    .contacts__info {
+        @include marginLeft(140);
+        @include size(690,735);
+        position: relative;
+        .contacts__title {
+            position: absolute;
+            top: 0; 
+            left: 0;
+        }
+        .contacts__phone {
+            position: absolute;
+            @include top(134);
+            left: 0;
+        }
+        .contacts__email {
+            position: absolute;
+            @include top(134);
+            @include left(275);
+        }
+        .contacts__address {
+            position: absolute;
+            @include top(343);
+            left: 0;
+        }
+        .contacts__card {
+            @include property(line-height,25);
+            position: absolute;
+            @include top(343);
+            @include left(275);
+            display: flex;
+            @include property(line-height, 30);
+            .contacts__file{
+                @include marginTop(8);
+                @include marginLeft(33);
+                @include size(39,44);
+            }
+        }
+        .contacts__button{
+            user-select: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: absolute;
+            @include top(569);
+            @include left(79);
+            @include size(305,53);
+            background-color: #002266;
+            @include borderRadius(10);
+            text-align: center;
+            font-family: Montserrat-Regular;
+            @include fontSize(20);
+            color: white;
+            @include paddingTop(10);
+            &:hover{
+                box-shadow: 0px 0px 14px #00000047;
+            }
+            &:active{
+                background-color: #002266b2;
+                box-shadow: 0px 0px 0px #0000003a;
+
+            }
+        }
+    }
+    .contacts__map {
+        background-image: url(../media/img/logo_full.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        @include size(950,735);
+    }
+}
+// .crumbs {
+//     font-family: Montserrat-Regular;
+//     font-size: 15px;
+//     position: absolute;
+//     top:32px;
+//     left: 140px;
+//     display: flex;
+// }
+
+
+
+
+
+
+
+.contacts__footer{
+    width: 100%;
+    @include height(110);
+    background-color: #FFFFFA;
+    @include paddingTop(37);
+    font-family:Montserrat-Bold;
+    @include fontSize(17);
+    .footer__container{
+        display: flex;
+        @include width(400);
+        margin: auto;
+        .footer__logo_img{
+            @include width(65);
+            height: auto;
+        }
+        .footer__copyright{
+            @include marginLeft(16);
+        }
+    }
+}
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+@media(max-width: 768px){
+    .contacts__content {
+        margin: auto;
+        margin-top: 52px;
+        padding-top: 61px;
+        display: block;
+        height: auto;
+    }
+
+    .contacts__info {
+        margin: auto;
+        width: 300px;
+        height: auto;
+        position: relative;
+    }
+    .contacts__title {
+        position: static;
+    }
+    .contacts__phone {
+        margin-top: 41px;
+        position: static;
+    }
+    .contacts__email {
+        margin-top: 41px;
+        position: static;
+    }
+    .contacts__address {
+        margin-top: 41px;
+        position: static;
+    }
+    .contacts__card {
+        margin-top: 41px;
+        position: static;
+        display: flex;
+    }
+    .contacts__file{
+        margin-top: 12px;
+        margin-left: 33px;
+        width: 26px;
+        height: 30px;
+    }
+    .contacts__button{
+        position: static;
+        margin: auto;
+        margin-top: 40px;
+        width: 158px;
+        height: 29px;
+        font-size: 10px;
+        padding-top: 7px;
+    }
+    
+    
+    .contacts__map {
+        margin: auto;
+        margin-top: 51px;
+        width: 300px;
+        height: 581px;
+    }
+
+    .contacts__footer{
+        width: 100vw;
+        height: 8px;
+        background-color: #FFFFFA;
+        display: flex;
+        padding-top: 37px;
+        /* padding-left: auto; */
+        font-size: 10px;
+        background-color: blue;
+        display: none;
+    }
+    .footer__copyright{
+        margin-left: 16px;
+    }
+}
+
