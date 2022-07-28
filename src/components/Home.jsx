@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import Form from './../components/Form';
 import { Helmet } from "react-helmet";
 import ReactWOW from 'react-wow'
-import fileIcon from '../media/icons/file.svg'
 
 import { ReactComponent as IconFile } from '../media/icons/file.svg';
 
@@ -108,7 +107,7 @@ export default function Home() {
                       на закупку</h2>
                   </div>
                   <div className="tezis__text wow animate__animated animate__fadeInUp">
-                    <p>98.5% от объема отработанного масла будет готово к дальнейшей эксплуатации</p>
+                    <p>95% от объема отработанного масла будет готово к дальнейшей эксплуатации</p>
                   </div>
                 </div>
                 <div className="tezis__column">
@@ -142,7 +141,7 @@ export default function Home() {
                     <h2>"Мобильное" восстановление</h2>
                   </div>
                   <div className="tezis__text wow animate__animated animate__fadeInUp">
-                    <p>Наша передвижная установка приедет к Вам для реализации всех необходимых задач</p>
+                    <p>Наша передвижная установка приедет к вам для реализации всех необходимых задач</p>
                   </div>
                 </div>
                 <div className="tezis__column">
@@ -154,7 +153,7 @@ export default function Home() {
                     <h2>Регенерация без остановок</h2>
                   </div>
                   <div className="tezis__text wow animate__animated animate__fadeInUp">
-                    <p>Работаем без отключения оборудования и слива масла из системы</p>
+                    <p>Работа от протоколов анализа масла до получения необходимых показателей</p>
                   </div>
                 </div>
                 <div className="tezis__column">
@@ -213,8 +212,8 @@ export default function Home() {
 
         <div className="home__results">
         <div className="content__container">
-          <div className="results__title">Результат очистки и регенерации</div>
-          <div className="results__resultRow">
+          <div className="results__title wow animate__animated animate__fadeInUp">Результат очистки и регенерации</div>
+          <div className="results__resultRow wow animate__animated animate__fadeInUp">
             <div className="result__example">
               <a href="../files/results/Россети_ФСК_ЕЭС_Пахра.pdf" target="_blank">
                 <div className="result__name">Россети ФСК ЕЭС Подстанция<br/> пс-500кв Пахра</div>

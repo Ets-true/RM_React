@@ -8,6 +8,7 @@ import Techno from './components/Techno.jsx';
 import Economic from './components/Economic.jsx';
 import Contact from './components/Contact.jsx';
 import Form from './components/Form.jsx'
+import Archive from './components/Archive.jsx';
 
 function App() {
   
@@ -36,6 +37,7 @@ function App() {
             <Route path="/company" element={<Company/>} />
             <Route path="/techno" element={<Techno/>} />
             <Route path="/economic" element={<Economic/>} />
+            <Route path="/archive" element={<Archive/>} />
             <Route path="/contact" element={<Contact showForm={showForm}/>} />
           </Routes>
           <Footer showForm={showForm}/>

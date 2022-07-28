@@ -81,6 +81,13 @@
             .event__text{
                 @include marginTop(20);
                 @include size(379,318);
+                .hash-ref{
+                    transition: all 0.2s;
+                    color: #002266;
+                    &:hover{
+                        color:#F27300
+                    }
+                }
             }
             .event__date{
                 @include size(260,52);

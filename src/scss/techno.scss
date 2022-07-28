@@ -55,7 +55,7 @@
         }
     }
     .technology__engineer {
-        @include marginTop(60);
+        @include marginTop(160);
         .engineer__title {
             display: flex;
             @include marginLeft(168);
@@ -69,6 +69,20 @@
             @include marginTop(61);
             @include marginLeft(279);
             @include paddingRight(134);
+            .hash-ref{
+                transition: all 0.2s;
+                color:#002266;
+                &:hover{
+                    color:#F27300
+                }
+            }
+            a{
+                transition: all 0.2s;
+                color:#002266;
+                &:hover{
+                    color:#F27300
+                }
+            }
         }
         .egineer__main {
             @include width(1640);
@@ -163,7 +177,7 @@
         }
     }
     .technology__chemistry {
-        @include marginTop(130);
+        @include marginTop(100);
         .chemistry__title {
             display: flex;
             @include marginLeft(168);
@@ -174,14 +188,15 @@
             }
         }
         .chemistry__info {
-            @include marginTop(39);
+            // @include marginTop(39);
             @include marginLeft(279);
+            @include paddingRight(134);
         }
         .chemistry__opener {
             @include width(1640);
             background-color: #FFFFFA;
             margin: auto;
-            @include marginTop(64);
+            @include marginTop(50);
             .opener__visible {
                 cursor: pointer;
                 @include paddingTop(50);
@@ -318,6 +333,7 @@
         @include paddingBottom(72);
         background-color: #F8F9FA;
         position: relative;
+        overflow: hidden;
         &:before{
             content: '';
             position: absolute;
@@ -330,6 +346,7 @@
             background-size: 120% 240%;
             background-repeat: none;
             opacity: 0.4;
+            // display: none;
         }
         .result__title {
             display: flex;

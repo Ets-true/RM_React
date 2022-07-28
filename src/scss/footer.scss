@@ -55,13 +55,14 @@
             margin-top: 10px;
         };
         .footer__phone{
-            margin-left: 20px;
+            margin-left: 10px;
         }
         .footer__form {
             cursor: pointer;   
-            opacity: 0.4;
+            // opacity: 0.4;
             @include mobile {
-                display: none;
+                margin-right: 10px;
+                // display: none;
             };
         }
     }

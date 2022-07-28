@@ -1,0 +1,120 @@
+@import "mixin.scss";
+
+.archive{
+  @include paddingBottom(100);
+  @include paddingTop(40);
+  background-color: #FFFFFA;
+  @include mobile {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  };
+  .archive__page{
+    font-family: "Montserrat-Regular";
+    @include fontSize(15);
+    @include marginLeft(200);
+    user-select: none;
+    @include mobile {
+      margin-left: 15px;
+      font-size: 10px;
+    };
+  }
+  .archive__section{
+    @include paddingTop(45);
+    @include marginBottom(75);
+    @include mobile {
+      padding-top: 20px; 
+      margin: 0;
+      margin-bottom: 20px;
+
+    };
+    .section__title{
+        font-family: "SourceSerif4-Bold";
+        @include marginLeft(378);
+        @include fontSize(25);
+        position: relative;
+        display: inline-block;
+        width: auto;
+        @include mobile {
+          padding: 0; margin: 0;
+          font-size: 15px;
+          margin-left: 20px;
+        };
+        &::after {
+            transition: all 0.2s;
+            content: '';
+            position: absolute;
+            @include bottom(-10);
+            left: 0;
+            width: 69%;
+            height: 2px;
+            background: linear-gradient(to right, black 0%, #F27300 100%);
+            animation: gradient 3s 5;
+            @include mobile {
+              bottom: -5px;
+              height: 1px;
+            };
+            // background: linear-gradient(to right, black 0%, #F27300 50%, black 100%);
+        }
+    }
+    .section__docs{
+      @include marginLeft(378);
+      @include marginTop(85);
+      @include paddingLeft(200);
+      @include mobile {
+        padding: 0; margin: 0;
+        padding-left: 30px;
+      };
+      .section__document{
+        user-select: none;
+        font-family: "Montserrat-Regular";
+        @include fontSize(20);
+        @include marginTop(30);
+        @include mobile {
+          font-size: 10px;
+        };
+        a{
+          transition: all 0.2s;
+          display: flex;
+          flex-shrink: none;
+          @include width(850);
+          &:hover{
+            color: #F27300;
+          }
+          @include mobile {
+            width: 300px;
+          };
+        }
+        p{
+          width: 380px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        svg{
+          @include size(25, 40);
+          @include marginRight(30);
+          @include marginTop(-5);
+          @include mobile {
+            margin: 0;
+            width: 15px;
+            height: auto;
+            display: none;
+          };
+        }
+      }
+    }
+  }
+}
+
+
+// @keyframes gradient {
+//   0%{
+//     background: linear-gradient(to right, black 0%, #F27300 100%);
+//   }
+//   50%{
+//     background: linear-gradient(to right, black 0%, #F27300 50%, black 100%);
+//   }
+//   100%{
+//     background: linear-gradient(to right, #F27300 0%, black 100%);
+//   }
+// }

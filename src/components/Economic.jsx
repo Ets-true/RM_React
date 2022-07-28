@@ -28,7 +28,7 @@ export default function Economic() {
           </div>
           <div class="economicBenefit__textTop wow animate__animated animate__fadeIn" data-wow-duration="0.8s">
             <p> На данной странице отображена модель расчета экономической выгоды при выборе услуг компании ООО
-              "Регенерация масел" по <br /> сверхглубокой очистке и восстановлению химико-физических свойств
+              "Регенерация масел" по <br /> сверхглубокой очистке и восстановлению физико-химических свойств
               отработанного масла.</p>
           </div>
 
@@ -163,7 +163,7 @@ export default function Economic() {
             <div class="conclusion__text wow animate__animated animate__fadeInUp">
               <p>{"    "}Просуммировав средние значения из полученных диапазонов делаем вывод, что
                 для продолжения работы своего объекта Предприятию А <br />
-                необходимо израсходовать около 3 млн рублей за 18 дней, заключая договоры с тремя
+                необходимо израсходовать около 3 млн рублей за 13 дней, заключая договоры с тремя
                 юридическими лицами: поставщик масла, подрядчик <br />
                 по обустройству места хранения и сборщик отработанного масла.</p>
             </div>
@@ -262,10 +262,10 @@ export default function Economic() {
               для соответствующих<br />
               объемов</div>
               <div className="docs__example">
-              <a href="../files/economic/Энерго-временные_затраты_20_тонн.pdf" target="_blank">
+              {/* <a href="../files/economic/Энерго-временные_затраты_20_тонн.pdf" target="_blank">
                 <div className="example__icon"><IconFile /></div>
                 <div className="example__name">10 тонн</div>
-              </a>
+              </a> */}
             </div>
             <div className="docs__example">
               <a href="../files/economic/Энерго-временные_затраты_20_тонн.pdf" target="_blank">

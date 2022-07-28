@@ -6,6 +6,8 @@ import fileIcon from '../media/icons/file.svg'
 import logoImg from '../media/img/logo_short.png'
 import {Helmet} from "react-helmet";
 import {Link} from "react-router-dom"
+import { ReactComponent as IconFile } from '../media/icons/file.svg';
+
 
 
 
@@ -41,17 +43,17 @@ export default function Contact(showForm) {
                     <div class="contacts__address">
                         <h2>Адрес</h2><br />
 
-                        <p> 115409, РФ, г. Москва,<br /> Каширское шоссе,<br /> д.46 строение 10, метро<br /> Каширское</p>
+                        <p> 115409, РФ, г. Москва,<br /> Каширское шоссе,<br /> д.49 строение 10, метро<br /> Каширское</p>
                     </div>
                     <a href="../files/cardRM.pdf" target="_blank">
                         <div class="contacts__card">
                             <h2> Карточка <br />компании</h2>
-                            <img src={fileIcon} alt="" class="contacts__file"></img>
+                            <IconFile className="contacts__file"/>
                         </div>
                     </a>
-                    <div class="contacts__button" onClick={() => {showForm.showForm()}}>
+                    {/* <div class="contacts__button" onClick={() => {showForm.showForm()}}>
                         Написать нам
-                    </div>
+                    </div> */}
                 </div>
                 <div class="contacts__map wow animate__animated animate__fadeIn" data-wow-duration="0.8s">
                 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8857bd38c31c2abc760dbcc4352f93af21260fef1450b0989fd162d7cc60dfe&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>                </div>
@@ -66,7 +68,7 @@ export default function Contact(showForm) {
                         </Link>
                     </div>
                     <div class="footer__copyright">
-                        ©2021{'   '}ООО "Регенерация масел"
+                        ©2022{'   '}ООО "Регенерация масел"
                     </div>
                 </div>
             </div>

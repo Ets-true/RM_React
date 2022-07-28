@@ -19,7 +19,8 @@ export default function Footer(showForm) {
         </div>
         <div class="footer__column_right">
             {/* <div class="footer__form" onClick={() => {showForm.showForm()}}>Написать нам</div> */}
-            <div class="footer__form">Написать нам</div>
+            <Link to="/archive" class="footer__form">Архив</Link>
+            {/* <div class="footer__form">Написать нам</div> */}
             <div class="footer__email">info@reg-oils.ru</div>
             <div class="footer__phone"> +7 (499) 324-89-47</div>
         </div>
