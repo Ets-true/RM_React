@@ -1,795 +1,419 @@
 @import "mixin.scss";
 
 .technology {
-    background-color: #FFFFFA;
+  background-color: #FFFFFA;
 }
 
 
+
+
 .technology__aboutTech {
-    @include paddingTop(65);
-    @include paddingLeft(278);
-    @include paddingRight(134);
-    @include paddingBottom(72);
+  @include paddingTop(80);
+  @include paddingLeft(278);
+  @include paddingRight(134);
+  @include paddingBottom(72);
+  position: relative;
+
+  .aboutTech__text1 {
+    @include marginTop(45);
+  }
+
+  .aboutTech__tezis {
+    @include height(112);
     position: relative;
-    .aboutTech__text1 {
-        @include marginTop(45);
+    @include marginTop(69);
+    @include marginLeft(221);
+    @include paddingTop(31);
+    @include paddingLeft(35);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 2px;
+      max-height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(to bottom, black 0%, #F27300 60%);
     }
-    .aboutTech__tezis {
-        @include height(112);
-        position: relative;
-        @include marginTop(69);
-        @include marginLeft(221);
-        @include paddingTop(31);
-        @include paddingLeft(35);
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            width: 2px;
-            max-height: 100%;
-            border-radius: inherit;
-            background: linear-gradient(to bottom, black 0%, #F27300 60%);
-        }
-    }
-    .aboutTech__text2 {
-        @include marginTop(71);
-    }
+  }
+
+  .aboutTech__text2 {
+    @include marginTop(71);
+  }
 }
 
 
 .technology__system {
-    background-color: #F8F9FA;
-    @include paddingTop(42);
-    .system__title {
-        @include marginLeft(278);
-        display: flex;
-        .system__patent {
-            display: flex;
-            @include marginLeft(686);
-            @include marginTop(15);
-            .file__icon {
-                @include size(39,44);
-                @include marginLeft(16);
-                @include marginTop(-10);
-            }
-        }
-    }
-    .technology__engineer {
-        @include marginTop(160);
-        .engineer__title {
-            display: flex;
-            @include marginLeft(168);
-            .engineer__icon{
-                @include size(49,49);
-                @include marginRight(60);
-                @include marginTop(-7);
-            }
-        }
-        .engineer__info {
-            @include marginTop(61);
-            @include marginLeft(279);
-            @include paddingRight(134);
-            .hash-ref{
-                transition: all 0.2s;
-                color:#002266;
-                &:hover{
-                    color:#F27300
-                }
-            }
-            a{
-                transition: all 0.2s;
-                color:#002266;
-                &:hover{
-                    color:#F27300
-                }
-            }
-        }
-        .egineer__main {
-            @include width(1640);
-            height: auto;
-            // @include size(1640,2402);
-            margin: auto;
-            @include marginTop(80);
-            @include paddingTop(66);
-            @include paddingBottom(100);
-            @include borderRadius(15);
-            background-color: #FFFFFA;
-            box-shadow: 0px 0px 24px #00000029;
-            position: relative;
-            .engineer__slider {
-                @include marginLeft(50);
-                @include marginRight(50);
-                @include height(933);
-                border-width: 1px;
-                border-bottom-style: solid;
-                border-bottom-color: #C4C4C4;
-                
-                .engineer__slider_slide_large {
-                    @include width(1086);
-                    @include marginRight(100);
-                }
-                .engineer__slider_slide_small {
-                    @include width(538);
-                }
-                .engineer__slider_img {
-                    margin: auto;
-                    width: auto;
-                    @include height(656);
-                }
-                .engineer__slider_text {
-                    @include marginTop(55);
-                    width: 100%;
-                    text-align: center;
-                }
-            }
-            .engineer__text {
-                margin: auto;
-                @include width(1532);
-                // @include size(1532,730);
-                @include paddingTop(89);
-                @include paddingLeft(137);
-                @include paddingRight(138);
-                border-width: 1px;
-                border-bottom-style: solid;
-                border-bottom-color: #C4C4C4;
-                border: none;
-                display: flex;
-                justify-content: space-between;
-                .en_text{
-                    @include width(536);
-                }
-            }
-            .engineer__scheme {
-                display: none;
-                transition: all 0.25s;
-                @include size(898,517);
-                margin: auto;
-                @include marginTop(85);
-                cursor: pointer;
-                &:hover {
-                    transition: all 0.25s;
-                    transform: scale(1.01)
-                    // @include size(943,543);
-                }
-                .scheme__img {
-                    @include height(429);
-                    background-color: white;
-                    border-width: 4px;
-                    border-style: solid;
-                    border-color: #E5E5E5;
-                    border-bottom: 0;
-                    background-image: url(../media/img/scheme_princ.jpg);
-                    background-size: cover;
-                    background-position: 50% 50%;
-                }
-                .scheme__title {
-                    @include paddingTop(23);
-                    font-family: Montserrat-Bold;
-                    @include fontSize(20);
-                    text-align: center;
-                    @include height(88);
-                    background-color: #F5F5F5;
-                    border-width: 4px;
-                    border-style: solid;
-                    border-color: #E5E5E5;
-                }
-            }
-        }
-    }
-    .technology__chemistry {
-        @include marginTop(100);
-        .chemistry__title {
-            display: flex;
-            @include marginLeft(168);
-            .chemistry__icon{
-                @include size(49,49);
-                @include marginRight(60);
-                @include marginTop(-7);
-            }
-        }
-        .chemistry__info {
-            // @include marginTop(39);
-            @include marginLeft(279);
-            @include paddingRight(134);
-        }
-        .chemistry__opener {
-            @include width(1640);
-            background-color: #FFFFFA;
-            margin: auto;
-            @include marginTop(50);
-            .opener__visible {
-                cursor: pointer;
-                @include paddingTop(50);
-                @include paddingLeft(138);
-                border-top-width: 1px;
-                border-top-style: solid;
-                border-color: black;
-                position: relative;
-                @include height(132);
-                .opener__button {
-                    position: absolute;
-                    @include top(52);
-                    @include right(48);
-                    @include size(27,27);
-                    .opener__arrow{
-                        transform: rotate(90deg);
-                    }
-                }
-            }
-            .opener__hidden {
-                @include height(640);
-                display: none;
-                @include paddingLeft(132);
-                .hidden__wrap{
-                    @include paddingTop(150);
-                    display: flex;
-                    font-family: Montserrat-Bold;
-                    @include fontSize(20);
-                    position: relative;
-                    .opener__columnNames {
-                        font-family: Montserrat-regular;
-                        @include fontSize(15);
-                        color: #888888;
-                        position: absolute;
-                        @include top(50);
-                        left: 0;
-                        display: flex;
-                        .pollution_delete {
-                            @include marginLeft(275);
-                        }
-                        .pollution {
-                            @include marginLeft(360);
-                        }
-                    }
-                    .opener__hidden_left {
-                        @include width(333);
-                        .opener__hidden_operation {
-                            @include marginBottom(100);
-                            @include marginRight(50);
-                        }
-                        .center{
-                            @include marginTop(120);
-                        }            
-                    }
-                    .opener__hidden_right {
-                        @include height(366);
-                        border-left-style:solid;
-                        border-width: 3px;
-                        border-color: black;
-                        @include paddingLeft(147);
-                        .hidden__block{
-                            @include marginBottom(104);
-                            .row {
-                                display: flex;
-                                @include marginBottom(27);
-                                .Col__tezis {
-                                    display: flex;
-                                    @include width(470);
-                                    .Col__point {
-                                        flex-shrink: 0;
-                                        @include size(8,8);
-                                        @include borderRadius(4);
-                                        @include marginRight(10);
-                                        @include marginTop(10);
-                                        background-color: black;
-                                        margin-left: 0px;
-                                    }
-                                    .Col__el {
-                                        @include marginLeft(16);
-                                    }
-                                }
-                                .Col_tezis_2{
-                                    @include marginLeft(88);
-                                }
-                            }
-                            .Stab{
-                                @include marginTop(145);
-                            }
-                        }
-                    }
-                }
-            }
-            .border_none{
-                border: 0;
-            }
-        }
-    }
-    
-    
-    .technology__form{
-        @include marginTop(125);
-        @include height(244);
-        width: 100%;
-        background-color: #FFFFFA;
-        box-shadow: 0px 0px 24px #00000029;
-        .form__title {
-            font-family: Montserrat-Bold;
-            @include fontSize(30);
-            @include paddingTop(78);
-            margin: auto;
-            text-align: center;
-        }
-        .form__button {
-            cursor: pointer;
-            margin: auto;
-            @include marginTop(35);
-            @include size(305,53);
-            background-color: #002266;
-            @include borderRadius(15);
-            text-align: center;
-            font-family: Montserrat-Regular;
-            @include fontSize(20);
-            color: white;
-            @include paddingTop(10);
-            opacity: 0.4;
-        }    
-    }
-    
-    
-    .technology__result{
-        @include marginTop(25);
-        @include paddingTop(80);
-        @include paddingRight(134);
-        @include paddingBottom(72);
-        background-color: #F8F9FA;
-        position: relative;
-        overflow: hidden;
-        &:before{
-            content: '';
-            position: absolute;
-            top: 0;
-            @include left(400);
-            width: 90%;
-            height: 100%;
-            background-image: url(../media/img/blot_blue.png) ;
-            background-position: center; 
-            background-size: 120% 240%;
-            background-repeat: none;
-            opacity: 0.4;
-            // display: none;
-        }
-        .result__title {
-            display: flex;
-            @include marginLeft(178);
-            .result__medal{
-                @include size(48,48);
-                @include marginRight(54);
-                @include marginTop(-5);
-            }
-        }
-        .result__text1 {
-            @include marginLeft(278);
-            @include marginTop(45);
-        }
-        .result__tezis {
-            @include height(180);
-            position: relative;
-            @include marginTop(112);
-            @include marginLeft(495);
-            @include paddingTop(65);
-            @include paddingLeft(60);
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0; right: 0; bottom: 0; left: 0;
-                width: 2px;
-                max-height: 100%;
-                border-radius: inherit;
-                background: linear-gradient(to bottom, black 0%, #F27300 60%);
-            }
-        }
-        
-        .result__text2 {
-            @include marginLeft(278);
-            @include marginTop(90);
-        }
-    }
+  background-color: #F8F9FA;
+  @include paddingTop(98);
 
-}
+  .techprocess__info{
+    @include paddingLeft(278);
+    .techprocess__title{
+      font-family: "Montserrat-Bold";
+      @include fontSize(25);
+    }
+    .techprocess__text{
+      @include marginTop(39);
+      @include width(1500);
+    }
+  }
 
-
-
-
-.slider__button_left {
-    position: absolute;
-    @include top(833);
-    @include left(1289);
-    @include size(79,42);
-    transition: all 0.5s;
-    cursor: pointer;
-    background-color:#002266;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-.slider__button_right {
-    position: absolute;
-    @include top(833);
-    @include left(1369);
-    transition: all 0.5s;
-    cursor: pointer;
-    margin-left: 1px;
-    @include size(79,42);
-    background-color:#002266;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-.slider__button_arrow{
-    @include size(47,27);
-    margin:auto;
-    @include marginTop(7);
-}
-
-.arrow_left{
-    transform: rotate(180deg);
-}
-
-
-
-
-
-
-
-
-
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-@media(max-width: 768px){
-    .technology {
-        margin-top: 52px;
-    }
-    .technology__aboutTech {
-        padding-top: 62px;
-        padding-left: 37px;
-        padding-right: 37px;
-        padding-bottom: 65px;
-        position: relative;
-    }
-    .aboutTech__title {
-        
-    }
-    .aboutTech__text1 {
-        margin-top: 30px;
-    }
-    .aboutTech__tezis {
-        width: 336px;
-        height: 135px;
-        position: relative;
-        margin-top: 60px;
-        margin-left: -10px;
-        padding-top: 30px;
-        padding-left: 0px;
-        text-align: center;
-    }
-    
-    .aboutTech__tezis::before {
-        content: '';
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        height: 2px;
-        width: 100%;
-        border-radius: inherit;
-        background: linear-gradient(to right, black 0%, #F27300 60%);
-    }
-    .aboutTech__tezis::after {
-        content: '';
-        position: absolute;
-        right: 0; bottom: 0; left: 0;
-        height: 2px;
-        width: 100%;
-        border-radius: inherit;
-        background: linear-gradient(to right, black 0%, #F27300 60%);
-    }
-    .aboutTech__text2 {
-        margin-top: 71px;
-    }
-    
-    .technology__system {
-        padding-top: 0px;
-    }
-    .system__title {
-        margin-left: 0px;
-        text-align: center;
-        display: block
-    }
-    .system__patent {
-        display: block;
-        margin-left: 0px;
-        margin-top: 18px;
-    }
-    .file__icon {
-        width: 23px;
-        height: 26px;
-        margin-left: 0px;
-        margin-top: 0px;
-        margin: auto;
-        margin-top: 10px;
-
-    }
-    .technology__engineer {
-        margin-top: 42px;
-    }
-    .engineer__title {
-        display: flex;
-        margin-left: 38px;
-    }
-    .engineer__icon{
-        width: 18px;
-        height: 18px;
-        margin-right: 37px;
-        margin-top: 2px;
-    }
-    .engineer__info {
-        margin-top: 30px;
-        margin-left: 37px;
-        margin-right: 37px;
-    }
-    .egineer__main {
-        width: 335px;
-        height: auto;
-        margin: auto;
-        margin-top: 50px;
-        padding-top: 40px;
-        padding-bottom: 35px;
-        position: relative;
-    }
-    .engineer__slider {
-        display: none; 
-        width: 300px;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin: auto;
-        height: auto;
-        border-width: 1px;
-        border-bottom-style: solid;
-        border-bottom-color: grey;
-        padding-bottom: 91px;
-    
-    }
-    .engineer__slider_slide_large {
-        width: 302px;
-        margin-right: 28px;
-    }
-    .engineer__slider_slide_small {
-        width: 135px;
-        margin-right: 28px;
-    }
-    .engineer__slider_img {
-        margin: auto;
-        width: auto;
-        height: 202px;
-    }
-    .engineer__slider_text {
-        margin-top: 27px;
-        width: 100%;
-        text-align: center;
-    }
-    .slider__button_block{
-        position: absolute;
-        top: 340px;
-        left: 37px;
-        display: flex;
-    }
-    .slider__button_left {
-        transition: all 0.5s;
-        cursor: pointer;
-        width: 131px;
-        height: 24px;
-        background-color:#002266;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-    }
-    .slider__button_right {
-        transition: all 0.5s;
-        cursor: pointer;
-        margin-left: 1px;
-        width: 131px;
-        height: 24px;
-        background-color:#002266;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-    .slider__button_arrow{
-        width: 28px;
-        height: 17px;
-        margin:auto;
-        margin-top: 4px;
-    }
-    .engineer__text {
-        margin: auto;
-        width: 300px;
-        height: auto;
-        padding-top: 30px;
-        padding-left: 0px;
-        padding-right: 0px;
-        border-width: 1px;
-        border-bottom-style: solid;
-        border-bottom-color: #C4C4C4;
-        display: block       ;
-        justify-content: space-between;
-    }
-    .en_text{
-        width: 300px;
-        margin-bottom: 20px;
-        /* background-color: grey; */
-    }
-    .engineer__scheme {
-        transition: none !important;
-        width: 300px;
-        height: auto;
-        margin: auto;
-        margin-top: 35px;
-        cursor: pointer;
-        background-color: red;
-    }
-    .engineer__scheme:hover {
-        transition: none !important;
-        width: 300px;
-        height: auto;
-    }
-    .scheme__img {
-        height: 250px;
-        background-color: white;
-        border-width: 2px;
-        border-style: solid;
-        border-color: #E5E5E5;
-        border-bottom: 0;
-    }
-    .scheme__title {
-        padding-top: 12px;
-        font-size: 10px;
-        height: 41px;
-        border-width: 2px;
-    }
-    .technology__chemistry {
-        margin-top: 130px;
-    }
-    .chemistry__title {
-        display: flex;
-        margin-left: 30px;
-    }
-    .chemistry__icon{
-        width: 21px;
-        height: 25px;
-        margin-right: 15px;
-        margin-top: -7px;
-    }
-    .chemistry__info {
-        margin: auto;
-        margin-top: 39px;
-        width: 300px;
-    }
-    .chemistry__opener {
-        width: 300px;
-        margin: auto;
-        margin-top: 64px;
-    }
+  .chemistry__opener {
+    @include width(1640);
+    background-color: #FFFFFA;
+    margin: auto;
+    @include marginTop(87);
 
     .opener__visible {
-        padding-top: 21px;
-        padding-left: 18px;
-        position: relative;
-        height: 81px;
-    }
+      cursor: pointer;
+      @include paddingTop(50);
+      @include paddingLeft(138);
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-color: black;
+      position: relative;
+      @include height(132);
 
-    .opener__title {
-        width: 145px;
-    }
-    .opener__button {
+      .opener__button {
         position: absolute;
-        top: 30px;
-        right: 48px;
-        width: 20px;
-        height: 20px;
-        /* background-color: grey; */
-    }
-    
-    .opener__arrow{
-        transform: rotate(90deg);
+        @include top(52);
+        @include right(48);
+        @include size(27, 27);
+
+        .opener__arrow {
+          transform: rotate(90deg);
+        }
+      }
     }
 
-    .hidden__wrap{
-        display: none;
-    }
-    
-    
     .opener__hidden {
-        height: 640px;
-        display: none;
-        
-        padding-left: 132px;
-    }
+      @include height(640);
+      display: none;
+      @include paddingLeft(132);
 
-    .technology__form{
-        margin-top: 125px;
-        height: 148px;
-    }
-    .form__title {
-        font-size: 14px;
-        width: 165px;
-        padding-top: 24px;
-    }
-    .form__button {
-        margin: auto;
-        margin-top: 32px;
-        width: 159px;
-        height: 29px;
-        text-align: center;
-        font-size: 10px;
-        color: white;
-        padding-top: 7px;
-    }
-
-    .technology__result{
-        margin-top: 25px;
-        padding-top: 80px;
-        padding-right: 134px;
-        padding-bottom: 72px;
-    }
-    
-    .result__title {
+      .hidden__wrap {
+        @include paddingTop(150);
         display: flex;
-        margin-left: 37px;
-    }
-    .result__medal{
-        width: 23px;
-        height: 23px;
-        margin-right: 54px;
-        margin-top: 0px;
-    }
-    .result__text1 {
-        margin-left: 37px;
-        margin-top: 45px;
-        width: 300px;
-    }
-    .result__tezis {
-        width: 336px;
-        height: 135px;
+        font-family: Montserrat-Bold;
+        @include fontSize(20);
         position: relative;
-        margin: auto;
-        margin-top: 60px;
-        padding-top: 30px;
-        padding-left: 0px;
-        text-align: center;
 
+        .opener__columnNames {
+          font-family: Montserrat-regular;
+          @include fontSize(15);
+          color: #888888;
+          position: absolute;
+          @include top(50);
+          left: 0;
+          display: flex;
+
+          .pollution_delete {
+            @include marginLeft(275);
+          }
+
+          .pollution {
+            @include marginLeft(360);
+          }
+        }
+
+        .opener__hidden_left {
+          @include width(333);
+
+          .opener__hidden_operation {
+            @include marginBottom(100);
+            @include marginRight(50);
+          }
+
+          .center {
+            @include marginTop(120);
+          }
+        }
+
+        .opener__hidden_right {
+          @include height(366);
+          border-left-style: solid;
+          border-width: 3px;
+          border-color: black;
+          @include paddingLeft(147);
+
+          .hidden__block {
+            @include marginBottom(104);
+
+            .row {
+              display: flex;
+              @include marginBottom(27);
+
+              .Col__tezis {
+                display: flex;
+                @include width(470);
+
+                .Col__point {
+                  flex-shrink: 0;
+                  @include size(8, 8);
+                  @include borderRadius(4);
+                  @include marginRight(10);
+                  @include marginTop(10);
+                  background-color: black;
+                  margin-left: 0px;
+                }
+
+                .Col__el {
+                  @include marginLeft(16);
+                }
+              }
+
+              .Col_tezis_2 {
+                @include marginLeft(88);
+              }
+            }
+
+            .Stab {
+              @include marginTop(145);
+            }
+          }
+        }
+      }
+    }
+
+    .border_none {
+      border: 0;
+    }
+  }
+
+  .technology__murm{
+    @include paddingLeft(278);
+    @include paddingBottom(24);
+    .murm__title{
+      @include marginTop(153);
+    }
+    .murm__tezis-group{
+      display: flex;
+      @include marginTop(122);
+      .murm__tezis-element{
+        @include marginRight(99);
+        .tezis__name{
+          display: flex;
+          justify-content: center;
+          font-family: times;
+          @include fontSize(35);
+          div{
+            @include marginRight(7);
+          }
+          sup{
+            @include fontSize(16);
+            @include marginTop(6);
+          }
+        }
+        .tezis__surname{
+          font-family: "Montserrat-Regular";
+          @include fontSize(20);
+          text-align: center
+        }
+      }
+    }
+    .murm__info{
+      @include marginTop(70);
+      display: flex;
+      .murm__img{
+        @include size(966,527);
+        border-radius: 15px;
+        background-color: grey;
+        background-image: url('../media/img/plant_murm.jpg');
+        background-size: cover;
+        background-size: 115% auto;
+        background-position: 90% 30%;
+      }
+      .murm__text-group{
+        @include marginLeft(95);
+        .murm__text-block{
+          @include width(404);
+          @include marginBottom(99);
+        }
+      }
+    }
+  }
+
+  .plant__title{
+    @include paddingLeft(278);
+    @include marginTop(140);
+  }
+  .plant__block{
+    @include marginLeft(193);
+    @include marginTop(140);
+    @include size(1173,402);
+    @include borderRadius(15);
+    background-color: #FFFFFA;
+    box-shadow: 0px 0px 24px #00000029;
+    position: relative;
+    @include paddingTop(21);
+    .plant__icon{
+      @include size(26,26);
+      @include marginLeft(18);
+      svg{
+        width: 100%; height: 100%;
+      }
+    }
+    .plant__info{
+      @include fontSize(20);
+      @include property(line-height,29);
+      @include marginTop(42);
+      @include marginLeft(85);
+      .firstText{
+        font-family: "Montserrat-Medium";
+      }
+      .secondText{
+        font-family: "Montserrat-Regular";
+      }
+      &-chemistry{
+        .firstText{
+          @include width(667);
+        }
+        .secondText{
+          display: flex;
+          justify-content: space-between;
+          @include width(642);
+          @include marginTop(38);
+          div{
+            @include width(290);
+          }
+        }
+      }
+      &-moim{
+        .firstText{
+          @include width(667);
+        }
+        .secondText{
+          @include marginTop(42);
+          @include width(610);
+        }
+      }
+      &-ksor{
+        display: flex;
+        .firstText{
+          @include width(289);
+          @include marginTop(29);
+        }
+        .secondText{
+          @include marginLeft(65);
+          @include width(286);
+        }
+      }
+    }
+    .plant__img{
+      transition: all 0.7s;
+      position: absolute;
+      @include top(34);
+      @include right(-361);
+      transform: translateX(60px);
+      @include size(612,334);
+      background-color: grey;
+      @include borderRadius(15);
+      opacity: 0;
+    }
+    .chemistry{
+      background-image: url('../media/img/plant_chemistry.jpg');
+      background-size: cover;
+      background-size: 105% auto;
+      background-position: 0% 50%;
+    }
+    .moim{
+      background-image: url('../media/img/plant_moim.jpg');
+      background-size: cover;
+      background-size: 105% auto;
+      background-position: 20% 30%;
+    }
+    .ksor{
+      background-image: url('../media/img/plant_ksor.jpg');
+      background-size: cover;
+      background-size: 105% auto;
+      background-position: 0% 0%;
     }
     
-    .result__tezis::before {
-        content: '';
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        height: 2px;
-        width: 100%;
-        border-radius: inherit;
-        background: linear-gradient(to right, black 0%, #F27300 60%);
+  }
+
+  .technology__result {
+    @include marginTop(90);
+    @include paddingTop(80);
+    @include paddingRight(134);
+    @include paddingBottom(72);
+    background-color: #F8F9FA;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      @include left(400);
+      width: 90%;
+      height: 100%;
+      background-image: url(../media/img/blot_blue.png);
+      background-position: center;
+      background-size: 120% 240%;
+      background-repeat: none;
+      opacity: 0.4;
+      // display: none;
     }
 
-    .result__tezis::after{
+    .result__title {
+      display: flex;
+      @include marginLeft(278);
+
+      .result__medal {
+        @include size(48, 48);
+        @include marginRight(54);
+        @include marginTop(-5);
+      }
+    }
+
+    .result__text1 {
+      @include marginLeft(278);
+      @include marginTop(45);
+    }
+
+    .result__tezis {
+      @include height(180);
+      position: relative;
+      @include marginTop(112);
+      @include marginLeft(495);
+      @include paddingTop(65);
+      @include paddingLeft(60);
+
+      &::before {
         content: '';
         position: absolute;
-        right: 0; bottom: 0; left: 0;
-        height: 2px;
-        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        max-height: 100%;
         border-radius: inherit;
-        background: linear-gradient(to right, black 0%, #F27300 60%);
-    } 
-
+        background: linear-gradient(to bottom, black 0%, #F27300 60%);
+      }
+    }
 
     .result__text2 {
-        margin-left: 37px;
-        margin-top: 45px;
-        width: 300px;
+      @include marginLeft(278);
+      @include marginTop(90);
     }
-    
-
-
-
+  }
 
 }
 
 
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media(max-width: 768px) {
+  .technology {
+    display: none;
+  }
+}

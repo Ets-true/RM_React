@@ -185,7 +185,7 @@ p{
   font-family: Montserrat-Regular;
   margin: 0;
   @include fontSize(20);
-  @include property(line-height,24);
+  @include property(line-height,29);
 }
 a{
   text-decoration: none;
