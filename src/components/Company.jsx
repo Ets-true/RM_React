@@ -110,7 +110,7 @@ export default function () {
                             <div className="client__image DGK_Nyr"></div>
                             <div className="client__name"><p>ДГК "Нюрингринская ГРЭС"</p></div>
                             <div className="client__work">
-                                <p>Поставлена и введена в эксплуатацию установка по очистке и регенерации масла КСОР-1   </p>
+                                <p>Поставлена и введена в эксплуатацию установка по очистке и регенерации масла КСОР-1</p>
                             </div>
                         </div>
                         <div className="clients__client_example">

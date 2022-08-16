@@ -1,5 +1,5 @@
 git add .
-git commit -m `zdump EST`
+git commit -m "$(date)"
 git push
 npm run build
 gulp 
