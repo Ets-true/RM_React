@@ -38,20 +38,21 @@ export default function Techno() {
   }, 300);
 
   setTimeout(() => {
-
-
     let plants = document.querySelectorAll('.plant__img')
     let num = 0;
     let winHeight = $(window).height();
     let murm = document.querySelector('.technology__murm')
     let counter_num = 0;
+    let plant_position
 
     $(window).on('scroll', function () {
-      let plant_position = plants[num].getBoundingClientRect().top;
+      plant_position = plants[num].getBoundingClientRect().top;
       if (plant_position <= winHeight / 1.05) {
         plants[num].style.opacity = 1;
         plants[num].style.transform = "translateX(0px)";
-        num++;
+        if(num<=1){
+          num++;
+        }
       }
 
       let murm_position = murm.getBoundingClientRect().top;
@@ -65,7 +66,42 @@ export default function Techno() {
     })
 
     function counter() {
-      var time = 2
+      var time = 1.5
+
+      $('.number-large').each(function () {
+        var
+          i = 0,
+          num = $(this).data('num'),
+          step = 1000 * time / num,
+          that = $(this),
+          int = setInterval(function () {
+            if (i <= num) {
+              that.html(i);
+            }
+            else {
+              clearInterval(int)
+            }
+            i=i+5
+          }, step);
+      })
+
+      $('.number').each(function () {
+        var
+          i = 0,
+          num = $(this).data('num'),
+          step = 1000 * time / num,
+          that = $(this),
+          int = setInterval(function () {
+            if (i <= num) {
+              that.html(i);
+            }
+            else {
+              clearInterval(int)
+            }
+            i=i+1
+          }, step);
+      })
+
       $('.number').each(function () {
         var
           i = 1,
@@ -79,12 +115,31 @@ export default function Techno() {
             else {
               clearInterval(int)
             }
-            i++
+            i=i+1
           }, step);
       })
+
+      $('.number-small').each(function () {
+        var
+          i = 0,
+          num = $(this).data('num'),
+          step = 1000 * time / num,
+          that = $(this),
+          int = setInterval(function () {
+            if (i <= num) {
+              that.html(i);
+            }
+            else {
+              clearInterval(int)
+            }
+            i = i + 1
+          }, step);
+      })
+
+      
     }
 
-  }, 300);
+  }, 500);
 
 
 
@@ -108,7 +163,7 @@ export default function Techno() {
           <div class="aboutTech__title wow animate__animated animate__fadeIn" data-wow-duration="0.8s"><h1>О технологии</h1></div>
           <div class="aboutTech__text1 wow animate__animated animate__fadeIn" data-wow-duration="0.8s">
             <p>Существует порядка десяти запатентованных методов по восстановлению отработанного масла. Но каждый включает в себя ряд
-              существенных недостатков. Простые способы очистки масла, включающие в себя комбинированные методы фильтрации, дегазации и осушки,
+              существенных недостатков. Простые способы очистки, состоящие из комбинации фильтрации, дегазации и осушки,
               дают низкое качество в виду отсутствия адсорбционной обработки. Более сложные технологии не отвечают требованиям
               малоотходности и экологической безопасности - осадок, образующийся после прохода через сорбент, требует последующей утилизации в
               качестве экологически опасного отхода. Данные недостатки были учтены в нашей разработке.</p>
@@ -117,7 +172,7 @@ export default function Techno() {
             <p>Из индустриальных масел мы восстанавливаем трансформаторные, турбинные и <br />компрессорные масла</p>
           </div>
           <div class="aboutTech__text2 wow animate__animated animate__fadeIn" data-wow-duration="0.8s">
-            <p>Нашим изобретением является способ регенерации отработанного энергетического масла, включающий удаление механических примесей,
+            <p>Нашим изобретением является способ регенерации отработанного энергетического масла, обеспечивающий удаление механических примесей,
               подогрев, вакуумную сушку и дегазацию, адсорбционную обработку и последующий ввод базового пакета присадок, отличающийся тем, что
               перед адсорбционной обработкой вводят деактиватор металлов в виде антраниловой кислоты, а для адсорбционной обработки применяют
               гранулированный алюмосиликатный адсорбент, впоследствии не требующий специализированной утилизации. <br />
@@ -134,14 +189,13 @@ export default function Techno() {
           <div className="techprocess__info">
             <div className="techprocess__title wow animate__animated animate__fadeIn" data-wow-duration="0.8s">Описание технологического процесса</div>
             <div className="techprocess__text wow animate__animated animate__fadeIn" data-wow-duration="0.8s">
-              <p>Работы по восстановлению индустриального масла любого типа начинаются с изучения
-                физико-химических протоколов текущих свойств масла, далее нами берется проба с
-                маслообъекта и проводится собстенный анализ. Далее, по результатам анализа проводится
-                очистка от выявленных загрязнений. При желании заказчика проводится полный цикл,
-                включающий в себя регенерацию масла, позволяющая вернуть масло к состоянию на момент покупки.
+              <p>Работы по восстановлению индустриального масла начинаются с изучения
+                протоколов физико-химических показателей представленного масла, после чего нами берется проба с
+                объекта заказчика для проведения собственного анализа. По его результатам принимается решение: выполнять полный 
+                цикл восстановления, включающий очистку и регенерацию или ограничиться только очисткой.
                 <br />
                 <br />
-                Ниже приведены разобранные примеры технологических операций:
+                Ниже приведены развернутые этапы операций:
               </p>
             </div>
           </div>
@@ -324,11 +378,11 @@ export default function Techno() {
           </div>
 
           <div className="technology__murm">
-            <div className="murm__title wow animate__animated animate__fadeIn" data-wow-duration="0.8s"><h1>Система регенерации масла МУРМ</h1></div>
+            <div className="murm__title wow animate__animated animate__fadeIn" data-wow-duration="0.8s"><h1>Мобильный комплекс МУРМ</h1></div>
             <div className="murm__tezis-group wow animate__animated animate__fadeIn" data-wow-duration="0.8s">
               <div className="murm__tezis-element">
                 <div className="tezis__name">
-                  <div className="number" data-num="1500">0</div>
+                  <div className="number-large" data-num="1500">0</div>
                   км
                 </div>
                 <div className="tezis__surname">удаленность работ</div>
@@ -342,7 +396,7 @@ export default function Techno() {
               </div>
               <div className="murm__tezis-element">
                 <div className="tezis__name">
-                  <div className="number" data-num="4.0">0</div>
+                  <div className="number-small" data-num="4">0</div>
                   м<sup>3</sup>/ч
                 </div>
                 <div className="tezis__surname">производительность</div>
@@ -353,7 +407,7 @@ export default function Techno() {
               <div className="murm__text-group ">
                 <div className="murm__text-block">
                   <p>
-                    Мобильная установка регенерации масла (МУРМ)
+                    Мобильная установка регенерации масла (далее - МУРМ)
                     позволяет удаленно выполнять полный цикл
                     восстановления индустриального масла на
                     объекте заказчика
@@ -361,9 +415,9 @@ export default function Techno() {
                 </div>
                 <div className="murm__text-block">
                   <p>
-                    В ней находится: блок ускоренной очистки
-                    МОИМ-4.0, установка очистки и регенерации
-                    КСОР-1, а также собственная хим.лаборатория
+                    МУРМ включает в себя: установку очистки
+                    МОИМ-4.0, установку регенерации
+                    КСОР-1, а также химическую лабораторию
                     для анализа показателей масла во время всего
                     технологического процесса
                   </p>
@@ -379,7 +433,7 @@ export default function Techno() {
               <div className="firstText">
                 Анализ качества необходимых параметров 
                 индустриального масла производится с 
-                использованием сертифицированного обородувания 
+                использованием <a href="../files/archive/хим.лаборатория.pdf" target="_blank"><strong>поверенного оборудования</strong></a>
               </div>
               <div className="secondText">
                 <div>
@@ -394,37 +448,45 @@ export default function Techno() {
             </div>
             <div className="plant__img chemistry"></div>
           </div>
-          <div className="plant__title"><h1>Очистка с помощью МОИМ 4.0</h1></div>
+          <div className="plant__title"><h1>Установка очистки МОИМ-4.0</h1></div>
           <div className="plant__block">
             <div className="plant__icon"><GearIcon /></div>
             <div className="plant__info plant__info-moim">
               <div className="firstText">
-                Установка, разработанная для ускорения
-                этапа очистки масла от временных загрязнений
+                Высокопроизводительная установка, выполняющая 
+                этап очистки масла от временных загрязнений
                 методом механической фильтраций и вакуумного
-                испарение
+                испарения
+                {/* <br/>
+                <strong><HashLink to="/archive#ksor" className="hash-ref">{' '}—— Документация</HashLink></strong> */}
               </div>
               <div className="secondText">
                 Располагается в основном кузове МУРМ, что позволяет
                 приехать на объект без прицепа с КСОР-1, в случаях,
                 когда нет необходимости в полном цикле регенерации
+                <br/>
+                <br/>
+                <strong><HashLink to="/archive#moim" className="hash-ref">Документация</HashLink></strong>
               </div>
             </div>
             <div className="plant__img moim"></div>
           </div>
-          <div className="plant__title"><h1>Регенерация КСОР-1</h1></div>
+          <div className="plant__title"><h1>Установка регенерации КСОР-1</h1></div>
           <div className="plant__block">
             <div className="plant__icon"><RegenerationIcon /></div>
             <div className="plant__info plant__info-ksor">
               <div className="firstText">
                 Установка полного цикла восстановления 
                 свойств масла с регенерацией через адсорбирующий блок
+                <br/>
+                <br/>
+                <strong><HashLink to="/archive#ksor" className="hash-ref">Документация</HashLink></strong>
               </div>
               <div className="secondText">
-                Изменяемые свойства: кислотность, тангенс 
-                диэлектрических потерь и пробивное напряжение.
+                Корректирует значения<br/> кислотного числа, тангенса 
+                диэлектрических потерь и пробивного напряжения
                 <br/><br/>
-                Место расположение: прицеп комплекса МУРМ
+                Расположена в прицепе комплекса МУРМ
               </div>
             </div>
             <div className="plant__img ksor"></div>
@@ -445,7 +507,7 @@ export default function Techno() {
             </div>
             <div class="result__text2 wow animate__animated animate__fadeIn" data-wow-duration="0.8s">
               <p>С полученными показателями кислотного числа, пробивного напряжения, содержания шлама, класса промышленной
-                частоты и остальными данными для трансформаторного и турбинного масел вы можете ознакомиться в архиве</p> <br />
+                частоты и остальными данными для трансформаторного и турбинного масел вы можете ознакомиться в архиве, раздел "Отчетная документация".</p> <br />
             </div>
           </div>
         </div>

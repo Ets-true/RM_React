@@ -271,6 +271,14 @@
       &-chemistry{
         .firstText{
           @include width(667);
+          a {
+            font-family: "Montserrat-Regular";
+            text-decoration: none;
+            color: rgb(7, 7, 119);
+            :hover{
+              color:#F27300;
+            }
+          }
         }
         .secondText{
           display: flex;
@@ -293,6 +301,7 @@
       }
       &-ksor{
         display: flex;
+        
         .firstText{
           @include width(289);
           @include marginTop(29);
@@ -324,7 +333,7 @@
       background-image: url('../media/img/plant_moim.jpg');
       background-size: cover;
       background-size: 105% auto;
-      background-position: 20% 30%;
+      background-position: 20% 35%;
     }
     .ksor{
       background-image: url('../media/img/plant_ksor.jpg');
@@ -356,12 +365,15 @@
       background-size: 120% 240%;
       background-repeat: none;
       opacity: 0.4;
+      z-index: 0;
       // display: none;
     }
 
     .result__title {
       display: flex;
       @include marginLeft(278);
+      z-index: 1;
+      position: relative;
 
       .result__medal {
         @include size(48, 48);
@@ -373,6 +385,9 @@
     .result__text1 {
       @include marginLeft(278);
       @include marginTop(45);
+      z-index: 10;
+      position: relative;
+
     }
 
     .result__tezis {
@@ -382,6 +397,8 @@
       @include marginLeft(495);
       @include paddingTop(65);
       @include paddingLeft(60);
+      z-index: 1;
+
 
       &::before {
         content: '';
@@ -400,6 +417,9 @@
     .result__text2 {
       @include marginLeft(278);
       @include marginTop(90);
+      z-index: 2;
+      position: relative;
+
     }
   }
 
@@ -407,13 +427,41 @@
 
 
 
-a {
-  text-decoration: none;
-  color: black;
-}
+// a {
+//   font-family: "Montserrat-Regular";
+//   text-decoration: none;
+//   color: rgb(7, 7, 119);
+//   :hover{
+//     color:#F27300;
+//   }
+// }
 
 @media(max-width: 768px) {
   .technology {
     display: none;
+  }
+}
+
+.hash-ref{
+  // transition: all 0.s;
+  font-family: "Montserrat-Regular";
+  color: rgb(7, 7, 119);
+  position: relative;
+  @include marginLeft(22);
+  &::before{
+    background-color: rgb(7, 7, 119);
+    @include size(17,2);
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -22px;
+    z-index: 100;
+  }
+  &:hover{
+    color: #F27300;
+    &::before{
+      background-color: #F27300;
+    }
   }
 }
