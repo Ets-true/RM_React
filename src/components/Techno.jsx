@@ -483,7 +483,7 @@ export default function Techno() {
                 <strong><HashLink to="/archive#ksor" className="hash-ref">Документация</HashLink></strong>
               </div>
               <div className="secondText">
-                Корректирует значения<br/> кислотного числа, тангенса 
+                Корректирует значения<br/> кислотного числа, тангенса угла
                 диэлектрических потерь и пробивного напряжения
                 <br/><br/>
                 Расположена в прицепе комплекса МУРМ
