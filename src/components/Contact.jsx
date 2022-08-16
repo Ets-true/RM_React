@@ -68,7 +68,7 @@ export default function Contact(showForm) {
                         </Link>
                     </div>
                     <div class="footer__copyright">
-                        ©2023{'   '}ООО "Регенерация масел"
+                        ©2022{'   '}ООО "Регенерация масел"
                     </div>
                 </div>
             </div>
