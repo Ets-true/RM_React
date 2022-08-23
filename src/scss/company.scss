@@ -70,7 +70,7 @@
         @include top(197);
         @include left(0);
         width: 100%;
-        @include height(419);
+        @include height(459);
         // @include size(1484,419);
         display: flex;
         justify-content: space-between;
@@ -80,7 +80,7 @@
             @include marginLeft(135);
             .event__text{
                 @include marginTop(20);
-                @include size(379,318);
+                @include size(379,348);
                 .hash-ref{
                     transition: all 0.2s;
                     color: #002266;
