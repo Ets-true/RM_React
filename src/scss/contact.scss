@@ -153,83 +153,9 @@ a {
 
 @media(max-width: 768px) {
   .contacts__content {
-    margin: auto;
-    margin-top: 52px;
-    padding-top: 61px;
-    display: block;
-    height: auto;
-  }
-
-  .contacts__info {
-    margin: auto;
-    width: 300px;
-    height: auto;
-    position: relative;
-  }
-
-  .contacts__title {
-    position: static;
-  }
-
-  .contacts__phone {
-    margin-top: 41px;
-    position: static;
-  }
-
-  .contacts__email {
-    margin-top: 41px;
-    position: static;
-  }
-
-  .contacts__address {
-    margin-top: 41px;
-    position: static;
-  }
-
-  .contacts__card {
-    margin-top: 41px;
-    position: static;
-    display: flex;
-  }
-
-  .contacts__file {
-    margin-top: 12px;
-    margin-left: 33px;
-    width: 26px;
-    height: 30px;
-  }
-
-  .contacts__button {
-    position: static;
-    margin: auto;
-    margin-top: 40px;
-    width: 158px;
-    height: 29px;
-    font-size: 10px;
-    padding-top: 7px;
-  }
-
-
-  .contacts__map {
-    margin: auto;
-    margin-top: 51px;
-    width: 300px;
-    height: 581px;
-  }
-
-  .contacts__footer {
-    width: 100vw;
-    height: 8px;
-    background-color: #FFFFFA;
-    display: flex;
-    padding-top: 37px;
-    /* padding-left: auto; */
-    font-size: 10px;
-    background-color: blue;
     display: none;
   }
-
-  .footer__copyright {
-    margin-left: 16px;
+  .contacts__footer {
+    display: none;
   }
 }

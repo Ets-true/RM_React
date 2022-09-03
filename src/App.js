@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
@@ -24,6 +24,16 @@ function App() {
     document.querySelector('body').style.paddingRight =  "7px"
 
   }
+
+  useEffect(()=>{
+    if(
+      (document.location.href.includes("/company") || document.location.href.includes("/techno") ||
+      document.location.href.includes("/economic") || document.location.href.includes("/contact")) && 
+      document.documentElement.clientWidth < 1024
+    ){
+      document.location.href = "/"
+    }
+  }, [])
 
   return (
    
