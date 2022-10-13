@@ -51,9 +51,9 @@ export default function Contact(showForm) {
               <IconFile className="contacts__file" />
             </div>
           </a>
-          {/* <div class="contacts__button" onClick={() => {showForm.showForm()}}>
-                        Написать нам
-                    </div> */}
+          <div class="contacts__button" onClick={() => { showForm.showForm() }}>
+            Написать нам
+          </div>
         </div>
         <div class="contacts__map wow animate__animated animate__fadeIn" data-wow-duration="0.8s">
           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af8857bd38c31c2abc760dbcc4352f93af21260fef1450b0989fd162d7cc60dfe&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>                </div>

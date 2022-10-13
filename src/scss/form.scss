@@ -3,103 +3,310 @@
 $blue: #002266;
 $grey: #9C9C9C;
 
-.form{
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 101;
-    display: none;
-    .form__wrapper{
+.form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 101;
+
+  display: none;
+  .form__wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .form__background {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.4;
+    }
+
+    .form__body {
+      position: absolute;
+      @include top(60);
+      left: 50%;
+      transform: translateX(-50%);
+      @include size(1040, 815);
+      background-color: white;
+
+      .form__animationBlock {
         width: 100%;
         height: 100%;
         position: relative;
-        .form__background{
-            cursor: pointer;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            opacity: 0.4;
+        display: flex;
+        @include paddingTop(220);
+        @include paddingLeft(83);
+        font-family: "Montserrat-Regular";
+        @include fontSize(20);
+        overflow: hidden;
+
+        .form__title {
+          position: absolute;
+          @include top(58);
+          @include left(83);
+          font-family: "Montserrat-SemiBold";
+          @include fontSize(25);
         }
-        .form__body{
-            position: absolute;
-            @include top(60);
-            left: 50%; transform: translateX(-50%);
-            @include size(1040,815);
-            background-color: white;
-            .form__animationBlock{
-                width: 100%;
-                height: 100%;
-                position: relative;
-                display: flex;
-                @include paddingTop(220);
-                @include paddingLeft(83);
-                font-family: "Montserrat-Regular";
-                @include fontSize(20);
-                .line{
-                    transition: all 2s;
-                    position: absolute;
-                    @include top(335);
-                    @include left(83);
-                    @include width(418);
-                    height: 2px;
-                    background-color: $grey;
-                    &:nth-child(2){
-                        @include top(502);
-                    }
-                    .line__body{
-                        @include width(418);
-                        height: 2px;
-                        position: relative;
-                        &::before{
-                            content: "";
-                            position: absolute;
-                            top: 0; left: 0;
-                            width: 0px;
-                            height: 2px;
-                            animation: space 2s reverse;
-                            animation-iteration-count: 1;
-                            background-color: $blue;
-                        }
-                    }
-                }
-                .block{
-                    position: absolute;
-                    @include top(195);
-                    @include left(501);
-                    @include size(445,446);
-                    @include borderRadius(10);
-                    border: 2px solid $grey;
-                }
-                .dataBlock__column_left{
-                    .point{
-                        display: flex;
-                        .point__num{
-                            color: #9C9C9C;
-                        }
-                        .point__title{
-                            @include marginLeft(30);
-                        }
-                        @include marginBottom(15);
-                    }
-                    input{
-                        @include marginBottom(105);
-                        @include marginLeft(49);
-                        border: none;
-                    }
-                }
+
+        .line {
+          transition: all 2s;
+          position: absolute;
+          @include top(335);
+          @include left(83);
+          @include width(418);
+          height: 2px;
+          background-color: $grey;
+
+          &:nth-child(2) {
+            @include top(502);
+          }
+
+          .line__body {
+            @include width(418);
+            height: 2px;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 0px;
+              height: 2px;
+              animation: space 2s reverse;
+              animation-iteration-count: 1;
+              background-color: $blue;
             }
+          }
         }
+
+        .dataBlock__column_left {
+          .point {
+            display: flex;
+
+            .point__num {
+              color: #9C9C9C;
+            }
+
+            .point__title {
+              @include marginLeft(30);
+            }
+
+            @include marginBottom(15);
+          }
+
+          input {
+            @include marginBottom(95);
+            @include marginLeft(49);
+            border: none;
+            outline: none;
+          }
+
+        }
+
+        .dataBlock__column_right {
+          position: absolute;
+          @include top(152);
+          @include left(501);
+          @include size(445, 530);
+          @include borderRadius(10);
+          border: 2px solid $grey;
+
+          .wrapper {
+            position: relative;
+            @include size(445, 530);
+            // @include paddingLeft(25);
+
+            .posab-wrapper {
+              transition: all 0.2s;
+              position: absolute;
+              @include bottom(28);
+              // background-color: green;
+              .point {
+                display: flex;
+                @include marginLeft(25);
+                .point__num {
+                  color: #9C9C9C;
+                }
+
+                .point__title {
+                  @include marginLeft(30);
+                }
+
+                @include marginBottom(15);
+              }
+
+              textarea {
+                transition: all 0.2s;
+                resize: none;
+                // pointer-events: auto;
+                @include width(314);
+                @include property(min-height,230);
+                @include property(max-height,280);
+                // @include size(314, 310);
+                @include marginLeft(82);
+                outline: none;
+                border: none;
+                overflow: scroll;
+                &::-webkit-scrollbar {
+                  width: 2px;
+                }
+              }
+              
+            }
+
+            .attach {
+              // left: 50%;
+              // transform: translateX(-50%);
+              @include marginTop(35);
+
+              .attach-line {
+                @include size(300, 1);
+                background-color: $grey;
+                @include marginLeft(73);
+              }
+
+              .attach-button {
+                @include marginLeft(53);
+                transition: all 0.2s;
+                user-select: none;
+                // text-align: center;
+                @include marginTop(25);
+                font-family: "Montserrat-Regular";
+                @include fontSize(17);
+                // max-height: 53px;
+                // overflow: scroll;
+
+                label {
+                  color: $grey;
+                  cursor: pointer;
+
+                  &:hover {
+                    color: $blue
+                  }
+                }
+
+                input {
+                  @include size(0.1, 0.1);
+                  opacity: 0;
+                }
+
+                .attached-ready{
+                  display: none;
+                  font-family: "Montserrat-Regular";
+                  @include fontSize(15);
+                  max-height: 90px;
+                  overflow: scroll;
+                  &::-webkit-scrollbar {
+                    width: 2px;
+                  }
+                  .attached-file{
+                    display: flex;
+                    .file-name{
+                      color: $blue;
+                      @include marginBottom(3);
+                    }
+                    .delete-button{
+                      @include marginLeft(27);
+                      color: #FF5E8A;
+                      cursor: pointer;
+
+                    }
+                  }
+                  .add-button{
+                    cursor: pointer;
+                    @include marginTop(15);
+                    color: #00B164;
+                    display: inline-block;
+                  }
+                }
+              }
+            }
+          }
+
+
+
+
+
+
+        }
+
+        .send-button {
+          position: absolute;
+          @include bottom(73);
+          @include right(231);
+          display: flex;
+          user-select: none;
+          cursor: pointer;
+
+          .loading {
+            @include size(45, 7);
+            border: 2px solid $grey;
+            @include borderRadius(10);
+            background-color: $grey;
+            @include marginRight(11);
+            @include marginTop(11);
+          }
+        }
+
+        .close-button {
+          transition: all 0.2s;
+          cursor: pointer;
+          @include size(116, 116);
+          @include borderRadius(58);
+          background-color: $blue;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate3d(69px, -69px, 0);
+          @include paddingTop(83);
+          @include paddingLeft(23);
+
+          &:hover {
+            transform: translate3d(64px, -64px, 0);
+
+            .close-icon {
+              transform: translate3d(5px, -5px, 0) rotate(45deg);
+
+              &::before {
+                transform: rotate(-90deg);
+              }
+            }
+          }
+
+          .close-icon {
+            transition: all 0.2s;
+            @include size(16, 1);
+            background-color: #fff;
+            position: relative;
+
+            &::before {
+              position: absolute;
+              content: '';
+              top: 0;
+              left: 0;
+              background-color: #fff;
+              @include size(16, 1);
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 
 
 @keyframes space {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 100%;
-    }
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
