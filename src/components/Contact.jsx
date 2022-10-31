@@ -32,16 +32,19 @@ export default function Contact(showForm) {
       <div class="contacts__content">
         <div class="contacts__info wow animate__animated animate__fadeIn" data-wow-duration="0.8s">
           <div class="contacts__title"><h1>Контактная информация</h1></div>
-          <div class="contacts__phone">
-            <h2>Телефон</h2> <br />
-            <p>+7 (499) 324-8947</p>
+          <div className="contact-row">
+            <div class="contacts__phone">
+              <h2>Телефон</h2>
+              <p>+7 (499) 324-8947</p>
+            </div>
+            <div class="contacts__email">
+              <h2>Почта</h2>
+              <p>info@reg-oils.ru</p>
+            </div>
           </div>
-          <div class="contacts__email">
-            <h2>Почта</h2><br />
-            <p>info@reg-oils.ru</p>
-          </div>
+          <div className="contact-row">
           <div class="contacts__address">
-            <h2>Адрес</h2><br />
+            <h2>Адрес</h2>
 
             <p> 115409, РФ, г. Москва,<br /> Каширское шоссе,<br /> д.49 строение 10, метро<br /> Каширское</p>
           </div>
@@ -51,6 +54,7 @@ export default function Contact(showForm) {
               <IconFile className="contacts__file" />
             </div>
           </a>
+          </div>
           {/* <div class="contacts__button" onClick={() => { showForm.showForm() }}>
             Написать нам
           </div> */}

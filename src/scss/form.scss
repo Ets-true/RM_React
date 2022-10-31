@@ -69,6 +69,7 @@ $grey: #9C9C9C;
             @include width(418);
             height: 2px;
             position: relative;
+            background-color: $blue;
 
             &::before {
               content: "";
@@ -77,9 +78,9 @@ $grey: #9C9C9C;
               left: 0;
               width: 0px;
               height: 2px;
-              animation: space 2s reverse;
-              animation-iteration-count: 1;
-              background-color: $blue;
+              // animation: space 2s reverse;
+              // animation-iteration-count: 1;
+              // background-color: $blue;
             }
           }
         }
@@ -89,11 +90,13 @@ $grey: #9C9C9C;
             display: flex;
 
             .point__num {
-              color: #9C9C9C;
+              // color: #9C9C9C;
+              color: #002266;
             }
 
             .point__title {
               @include marginLeft(30);
+              color: #002266;
             }
 
             @include marginBottom(15);
@@ -104,6 +107,7 @@ $grey: #9C9C9C;
             @include marginLeft(49);
             border: none;
             outline: none;
+            @include width(305);
           }
 
         }
@@ -114,7 +118,7 @@ $grey: #9C9C9C;
           @include left(501);
           @include size(445, 530);
           @include borderRadius(10);
-          border: 2px solid $grey;
+          border: 2px solid $blue;
 
           .wrapper {
             position: relative;
@@ -130,11 +134,12 @@ $grey: #9C9C9C;
                 display: flex;
                 @include marginLeft(25);
                 .point__num {
-                  color: #9C9C9C;
+                  color: #002266;;
                 }
 
                 .point__title {
                   @include marginLeft(30);
+                  color: #002266;
                 }
 
                 @include marginBottom(15);
@@ -145,8 +150,8 @@ $grey: #9C9C9C;
                 resize: none;
                 // pointer-events: auto;
                 @include width(314);
-                @include property(min-height,230);
-                @include property(max-height,280);
+                @include property(min-height,295);
+                @include property(max-height,295);
                 // @include size(314, 310);
                 @include marginLeft(82);
                 outline: none;
@@ -166,7 +171,7 @@ $grey: #9C9C9C;
 
               .attach-line {
                 @include size(300, 1);
-                background-color: $grey;
+                background-color: $blue;
                 @include marginLeft(73);
               }
 
@@ -174,7 +179,7 @@ $grey: #9C9C9C;
                 @include marginLeft(53);
                 transition: all 0.2s;
                 user-select: none;
-                // text-align: center;
+                text-align: center;
                 @include marginTop(25);
                 font-family: "Montserrat-Regular";
                 @include fontSize(17);
@@ -184,7 +189,7 @@ $grey: #9C9C9C;
                 label {
                   color: $grey;
                   cursor: pointer;
-
+                  text-align: center;
                   &:hover {
                     color: $blue
                   }
@@ -196,17 +201,23 @@ $grey: #9C9C9C;
                 }
 
                 .attached-ready{
+                  @include paddingRight(5);
                   display: none;
                   font-family: "Montserrat-Regular";
                   @include fontSize(15);
                   max-height: 90px;
                   overflow: scroll;
+                  text-align: left;
                   &::-webkit-scrollbar {
                     width: 2px;
                   }
                   .attached-file{
                     display: flex;
                     .file-name{
+                      @include width(252);
+                      white-space: nowrap; /* Запрещаем перенос строк */
+                      overflow: hidden; /* Обрезаем все, что не помещается в область */
+                      text-overflow: ellipsis; /* Добавляем многоточие */
                       color: $blue;
                       @include marginBottom(3);
                     }
@@ -219,9 +230,12 @@ $grey: #9C9C9C;
                   }
                   .add-button{
                     cursor: pointer;
-                    @include marginTop(15);
+                    @include marginTop(10);
                     color: #00B164;
                     display: inline-block;
+                    label{ 
+                      color: #00B164;
+                    }
                   }
                 }
               }
@@ -245,9 +259,9 @@ $grey: #9C9C9C;
 
           .loading {
             @include size(45, 7);
-            border: 2px solid $grey;
+            border: 2px solid $blue;
             @include borderRadius(10);
-            background-color: $grey;
+            background-color: $blue;
             @include marginRight(11);
             @include marginTop(11);
           }

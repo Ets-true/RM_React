@@ -466,7 +466,7 @@ export default function Techno() {
                 когда нет необходимости в полном цикле регенерации
                 <br/>
                 <br/>
-                <strong><HashLink to="/archive#moim" className="hash-ref">Документация</HashLink></strong>
+                <strong><HashLink to="/archive#moim" className="hash-ref"><span className='line'>—</span> Документация</HashLink></strong>
               </div>
             </div>
             <div className="plant__img moim"></div>
@@ -480,7 +480,7 @@ export default function Techno() {
                 свойств масла с регенерацией через адсорбирующий блок
                 <br/>
                 <br/>
-                <strong><HashLink to="/archive#ksor" className="hash-ref">Документация</HashLink></strong>
+                <strong><HashLink to="/archive#ksor" className="hash-ref"><span className='line'>—</span> Документация</HashLink></strong>
               </div>
               <div className="secondText">
                 Корректирует значения<br/> кислотного числа, тангенса угла

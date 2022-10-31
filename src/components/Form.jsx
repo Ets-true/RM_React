@@ -1,9 +1,45 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import "../scss/form.scss"
+import $ from 'jquery'
 
 export default function Form(closeForm) {
 
+  const sendMail = () => {
+    console.log("clicked")
+    let formData = new FormData();
+    let inputFiles = files
+    // console.log(inputFiles)
+
+    let name = document.querySelector('#name').value
+    let phone = document.querySelector('#phone').value
+    let email = document.querySelector('#email').value
+    let text = document.querySelector('#text').value
+    // let filesInp = document.querySelector("#file").files
+    // console.log(filesInp)
+  
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('phone', phone);
+    formData.append('text', text);
+    formData.append('files', inputFiles);
+
+    $.ajax({
+      url: 'https://mail.regeneration-oil.ru/mail.php', 
+      dataType: 'text', 
+      cache: false,
+      contentType: false,
+      processData: false,
+      data: formData,                         
+      type: 'post',
+      beforeSend: function(){
+      },
+      success: function(){
+      }
+   });
+  }
+
+ 
 
   function OnInput() {
     if(this.scrollHeight<315){
@@ -25,6 +61,7 @@ export default function Form(closeForm) {
       input = document.querySelector("#file")
       inputLabel = document.querySelector("#input-label")
       attachedReady= document.querySelector(".attached-ready")
+     
 
       inputLabel.style.display = "block"
       attachedReady.style.display = "none"
@@ -87,17 +124,17 @@ export default function Form(closeForm) {
                 <div className="point__num">01</div>
                 <div className="point__title">Ваше имя:</div>
               </div>
-              <input type="text" placeholder="Иван Иванов" />
+              <input id="name" type="text" placeholder="Иван Иванов" />
               <div className="point">
                 <div className="point__num">02</div>
                 <div className="point__title">Email:</div>
               </div>
-              <input type="text" placeholder="info@gmail.com" />
+              <input id="email" className="mail-input" type="text" placeholder="info@gmail.com" />
               <div className="point">
                 <div className="point__num">03</div>
                 <div className="point__title">Телефон:</div>
               </div>
-              <input type="text" placeholder="+7 (495) 900-70-70" />
+              <input id="phone" type="text" placeholder="+7 (495) 900-70-70" />
             </div>
             <div className="dataBlock__column_right">
               <div className="wrapper">
@@ -106,7 +143,7 @@ export default function Form(closeForm) {
                     <div className="point__num">04</div>
                     <div className="point__title">Сообщение:</div>
                   </div>
-                  <textarea placeholder='Текст вашего сообщения пишите здесь' />
+                  <textarea id="text" placeholder='Текст вашего сообщения пишите здесь' />
 
                   <div className="attach">
                     <div className="attach-line"></div>
@@ -131,7 +168,7 @@ export default function Form(closeForm) {
               </div>
 
             </div>
-            <div className="send-button">
+            <div className="send-button" onClick={() => sendMail()}>
               <div className="loading"></div>
               Отправить
             </div>
