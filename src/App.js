@@ -5,6 +5,7 @@ import Footer from './components/Footer.jsx';
 import Home from './components/Home.jsx'
 import Company from './components/Company.jsx'
 import Techno from './components/Techno.jsx';
+import Plants from './components/Plants.jsx';
 import Economic from './components/Economic.jsx';
 import Contact from './components/Contact.jsx';
 import Form from './components/Form.jsx'
@@ -46,6 +47,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/company" element={<Company/>} />
             <Route path="/techno" element={<Techno/>} />
+            <Route path="/plants" element={<Plants/>} />
             <Route path="/economic" element={<Economic/>} />
             <Route path="/archive" element={<Archive/>} />
             <Route path="/contact" element={<Contact showForm={showForm}/>} />
