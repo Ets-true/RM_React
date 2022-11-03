@@ -155,7 +155,7 @@ export default function Plants() {
     <div class="technology">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Технология | РМ</title>
+        <title>Установки | РМ</title>
       </Helmet>
       {/* <div class="content__container">
         <div class="technology__aboutTech">

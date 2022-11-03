@@ -29,7 +29,8 @@ function App() {
   useEffect(()=>{
     if(
       (document.location.href.includes("/company") || document.location.href.includes("/techno") ||
-      document.location.href.includes("/economic") || document.location.href.includes("/contact")) && 
+      document.location.href.includes("/economic") || document.location.href.includes("/contact") || document.location.href.includes("/plants")) 
+      && 
       document.documentElement.clientWidth < 768
     ){
       document.location.href = "/"
