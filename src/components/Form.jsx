@@ -6,15 +6,18 @@ import $ from 'jquery'
 export default function Form(closeForm) {
 
   const sendMail = () => {
+
+    closeForm.closeForm()
     console.log("clicked")
     let formData = new FormData();
-    let inputFiles = files
+    // let inputFiles = files
     // console.log(inputFiles)
 
     let name = document.querySelector('#name').value
     let phone = document.querySelector('#phone').value
     let email = document.querySelector('#email').value
     let text = document.querySelector('#text').value
+
     // let filesInp = document.querySelector("#file").files
     // console.log(filesInp)
   
@@ -22,87 +25,116 @@ export default function Form(closeForm) {
     formData.append('email', email);
     formData.append('phone', phone);
     formData.append('text', text);
-    formData.append('files', inputFiles);
+    // formData.append('files', inputFiles);
 
-    $.ajax({
-      url: 'https://mail.regeneration-oil.ru/mail.php', 
-      dataType: 'text', 
-      cache: false,
-      contentType: false,
-      processData: false,
-      data: formData,                         
-      type: 'post',
-      beforeSend: function(){
-      },
-      success: function(){
-      }
-   });
+  //   $.ajax({
+  //     url: 'https://mail.regeneration-oil.ru/mail.php', 
+  //     dataType: 'text', 
+  //     cache: false,
+  //     contentType: false,
+  //     processData: false,
+  //     data: formData,                         
+  //     type: 'post',
+  //     beforeSend: function(){
+  //     },
+  //     success: function(){
+  //     }
+  //  });
+
+    document.querySelector('#name').value = ''
+    document.querySelector('#phone').value = ''
+    document.querySelector('#email').value = ''
+    document.querySelector('#text').value = ''
+
+    document.querySelector('.push').style.display =  "block"
+    document.querySelector('body').style.overflowY =  "hidden"
+    document.querySelector('body').style.paddingRight =  "7px"
+    setTimeout(() => {
+      document.querySelector('.push').style.opacity =  1
+      setTimeout(() => {
+        document.querySelector('.push').style.opacity =  0
+        document.querySelector('body').style.overflowY =  "scroll"
+        document.querySelector('body').style.paddingRight =  "0px"
+        setTimeout(() => {
+          document.querySelector('.push').style.display =  "none"
+        }, 5000);
+      }, 2000);
+    }, 100);
+    
+    setTimeout(() => {
+      document.querySelector('.push').style.display =  "none"
+      document.querySelector('body').style.overflowY =  "scroll"
+      document.querySelector('body').style.paddingRight =  "0px"
+      setTimeout(() => {
+      }, 500);
+    }, 3000);
+    
   }
 
  
 
-  function OnInput() {
-    if(this.scrollHeight<315){
-      this.style.height = 'auto';
-      this.style.height = (this.scrollHeight) + 'px';
-    } else {
-      this.style.overflow = "scroll"
-    }
-  }
+  // function OnInput() {
+  //   if(this.scrollHeight<315){
+  //     this.style.height = 'auto';
+  //     this.style.height = (this.scrollHeight) + 'px';
+  //   } else {
+  //     this.style.overflow = "scroll"
+  //   }
+  // }
 
-  const [files, setfiles] = useState([]) 
-  let inputLabel, input, array, attachedReady, filesObj,filesArray
+  // const [files, setfiles] = useState([]) 
+  // let inputLabel, input, array, attachedReady, filesObj,filesArray
 
-  const showFiles = (flag) => {
-    if(flag == true){
-      inputLabel.style.display = "none"
-      attachedReady.style.display = "block"
-    } else {
-      input = document.querySelector("#file")
-      inputLabel = document.querySelector("#input-label")
-      attachedReady= document.querySelector(".attached-ready")
+  // const showFiles = (flag) => {
+  //   if(flag == true){
+  //     inputLabel.style.display = "none"
+  //     attachedReady.style.display = "block"
+  //   } else {
+  //     input = document.querySelector("#file")
+  //     inputLabel = document.querySelector("#input-label")
+  //     attachedReady= document.querySelector(".attached-ready")
      
 
-      inputLabel.style.display = "block"
-      attachedReady.style.display = "none"
-    }
-  }
+  //     inputLabel.style.display = "block"
+  //     attachedReady.style.display = "none"
+  //   }
+  // }
 
 
-  const onChange = () => {
-    filesObj = Object.entries(input.files);
-    input.value = ''
-    filesArray = []
-    filesObj.map(function(file, i){
-      filesArray[i] = file[1]
-    })
-    setfiles(files => [...files, ...filesArray])
-    showFiles(true)
-  }
+  // const onChange = () => {
+  //   filesObj = Object.entries(input.files);
+  //   input.value = ''
+  //   filesArray = []
+  //   filesObj.map(function(file, i){
+  //     filesArray[i] = file[1]
+  //   })
+  //   setfiles(files => [...files, ...filesArray])
+  //   showFiles(true)
+  // }
 
-  const onDeleteFile = (i) => {
-    array = files
-    array.splice(i, 1)
-    if(array.length == 0){
-      console.log(array.length)
-      showFiles(false)
-    }
-    setfiles([...array])
-  }
+  // const onDeleteFile = (i) => {
+  //   array = files
+  //   array.splice(i, 1)
+  //   if(array.length == 0){
+  //     console.log(array.length)
+  //     showFiles(false)
+  //   }
+  //   setfiles([...array])
+  // }
 
 
-  useEffect(() => {
-    input = document.querySelector("#file")
-    inputLabel = document.querySelector("#input-label")
-    input.addEventListener('change', onChange)
-    attachedReady= document.querySelector(".attached-ready")
+  // useEffect(() => {
+  //   input = document.querySelector("#file")
+  //   inputLabel = document.querySelector("#input-label")
+  //   input.addEventListener('change', onChange)
+  //   attachedReady= document.querySelector(".attached-ready")
 
-    let tx = document.getElementsByTagName('textarea');
-    for (let i = 0; i < tx.length; i++) {
-      tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
-      tx[i].addEventListener("input", OnInput, false);
-    }
-  }, [])
+  //   let tx = document.getElementsByTagName('textarea');
+  //   for (let i = 0; i < tx.length; i++) {
+  //     tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
+  //     tx[i].addEventListener("input", OnInput, false);
+  //   }
+  // }, [])
 
 
 
@@ -146,7 +178,7 @@ export default function Form(closeForm) {
                   <textarea id="text" placeholder='Текст вашего сообщения пишите здесь' />
 
                   <div className="attach">
-                    <div className="attach-line"></div>
+                    {/* <div className="attach-line"></div>
                     <div className="attach-button">
                       <label for="file" id="input-label">Прикрепить протоколы</label>
                       <input type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />  
@@ -162,7 +194,7 @@ export default function Form(closeForm) {
                         })}
                         <div className="add-button"><label for="file">Добавить</label></div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

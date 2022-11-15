@@ -151,7 +151,8 @@ $grey: #9C9C9C;
                 // pointer-events: auto;
                 @include width(314);
                 @include property(min-height,295);
-                @include property(max-height,295);
+                @include property(max-height,525);
+                // @include property(max-height,295);
                 // @include size(314, 310);
                 @include marginLeft(82);
                 outline: none;
@@ -168,6 +169,7 @@ $grey: #9C9C9C;
               // left: 50%;
               // transform: translateX(-50%);
               @include marginTop(35);
+              @include height(50);
 
               .attach-line {
                 @include size(300, 1);
@@ -276,15 +278,15 @@ $grey: #9C9C9C;
           position: absolute;
           top: 0;
           right: 0;
-          transform: translate3d(69px, -69px, 0);
+          transform: translate3d(adpt(69), adpt(-69), 0);
           @include paddingTop(83);
           @include paddingLeft(23);
 
           &:hover {
-            transform: translate3d(64px, -64px, 0);
+            transform: translate3d(adpt(64), adpt(-64), 0);
 
             .close-icon {
-              transform: translate3d(5px, -5px, 0) rotate(45deg);
+              transform: translate3d(adpt(5), adpt(-5), 0) rotate(45deg);
 
               &::before {
                 transform: rotate(-90deg);

@@ -23,8 +23,8 @@ function App() {
     document.querySelector('.form').style.display =  "block"
     document.querySelector('body').style.overflowY =  "hidden"
     document.querySelector('body').style.paddingRight =  "7px"
-
   }
+
 
   useEffect(()=>{
     if(
@@ -40,7 +40,11 @@ function App() {
   return (
    
     <div className="App">
-      
+        <div className="push">
+          <div className="push-wrap">
+             Ваше сообщение успешно доставлено
+          </div>
+        </div>
         <Router>
           <Form closeForm={closeForm}/>
           <Navbar/>
