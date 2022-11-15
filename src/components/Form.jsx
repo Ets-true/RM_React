@@ -27,19 +27,20 @@ export default function Form(closeForm) {
     formData.append('text', text);
     // formData.append('files', inputFiles);
 
-  //   $.ajax({
-  //     url: 'https://mail.regeneration-oil.ru/mail.php', 
-  //     dataType: 'text', 
-  //     cache: false,
-  //     contentType: false,
-  //     processData: false,
-  //     data: formData,                         
-  //     type: 'post',
-  //     beforeSend: function(){
-  //     },
-  //     success: function(){
-  //     }
-  //  });
+    $.ajax({
+      url: 'https://mail.regeneration-oil.ru/mail.php', 
+      dataType: 'text', 
+      cache: false,
+      contentType: false,
+      processData: false,
+      data: formData,                         
+      type: 'post',
+      beforeSend: function(){
+      },
+      success: function(){
+        
+      }
+   });
 
     document.querySelector('#name').value = ''
     document.querySelector('#phone').value = ''
@@ -61,13 +62,6 @@ export default function Form(closeForm) {
       }, 2000);
     }, 100);
     
-    setTimeout(() => {
-      document.querySelector('.push').style.display =  "none"
-      document.querySelector('body').style.overflowY =  "scroll"
-      document.querySelector('body').style.paddingRight =  "0px"
-      setTimeout(() => {
-      }, 500);
-    }, 3000);
     
   }
 
