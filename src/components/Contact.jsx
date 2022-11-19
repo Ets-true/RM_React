@@ -35,8 +35,8 @@ export default function Contact(showForm) {
           <div className="contact-row">
             <div class="contacts__phone">
               <h2>Телефон</h2>
-              <p>8 (968) 085-83-03</p>
-              {/* <p>+7 (499) 324-8947</p> */}
+              {/* <p>8 (968) 985-8303</p> */}
+              <p>+7 (499) 324-8947</p>
             </div>
             <div class="contacts__email">
               <h2>Почта</h2>
