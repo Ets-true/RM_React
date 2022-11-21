@@ -1,100 +1,125 @@
 @import "mixin.scss";
 @import "fonts.scss";
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    @include property(height,100);
-    background-color: #FFFFFA;
-    z-index: 100;
-    box-shadow: 0px 0px 24px #00000029;
-    @include mobile {
-        height: 52px;
-    };
-    .header__content{
-        display: flex;
-        justify-content: space-between;
-        margin: auto;
-        width: 85%;
-        max-width: 1640px;
-        @include mobile {
-            width: 100%;
-            margin: 0;
-            position: relative;
-        };
-    }
-    .header__column{
-        @include property(height,100);
-        display: flex;
-        // justify-content: space-between;
-        @include paddingTop(33);
-        // background-color: green;
-    }
-    .header__logo{
-        @include marginTop(13);
-        @include size(220,80);
-        @include marginLeft(60);
-        @include mobile {
-            width: auto;
-            margin: auto;
-            margin-top: 7px;
-        };
-        .header__logo_img{
-            max-width: 100%;
-            height: auto;
-            @include mobile {
-                width: 119px;
-                height: 40px;
-                transform: translatez(0);
-                image-rendering: -webkit-optimize-contrast;
-                background-color: white;
-            };
-        }
-    }
-}
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  @include property(height, 100);
+  background-color: #FFFFFA;
+  z-index: 100;
+  box-shadow: 0px 0px 24px #00000029;
 
+  @include mobile {
+    height: 52px;
+  }
 
-._l{
-    // @include property(width,450);
+  ;
+
+  .header-content {
+    position: relative;
+    display: flex;
+    margin: auto;
+
+    // max-width: 1640px;
     @include mobile {
-        display: none !important;
-    };
-    .header__link{
-        &:nth-child(2){
-            @include marginLeft(70);
-        }
+      width: 100%;
+      margin: 0;
+      position: relative;
     }
-}
-._r{
-    @include property(width,570);
-    @include mobile {
-        display: none !important;
-    };
-    .header__link{
-        &:nth-child(2){
-            @include marginLeft(60);
-        }
-        &:nth-child(3){
-            @include marginLeft(65);
-        }
-    }
-}
 
-.header__link{
-    font-family: SourceSerif4-Semibold;
-    @include fontSize(25);
-    color: black;
+    ;
+  }
+
+  .header-logo {
+    @include marginTop(13);
+    @include size(219, 74);
+    @include marginLeft(40);
+
     @include mobile {
+      width: auto;
+      margin: auto;
+      margin-top: 7px;
+    }
+
+    ;
+
+    img {
+      width: 100%;
+      height: auto;
+
+      @include mobile {
+        width: 119px;
+        height: 40px;
+        transform: translatez(0);
+        image-rendering: -webkit-optimize-contrast;
+        background-color: white;
+      }
+
+      ;
+    }
+  }
+
+  .header-links {
+    position: absolute;
+    @include right(26);
+    @include top(30);
+    display: flex;
+
+    .header-link {
+      font-family: SourceSerif4-Semibold;
+      @include fontSize(25);
+      color: black;
+      @include marginRight(55);
+      &-active{
+        @include marginRight(120);
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          @include top(-8);
+          @include right(-60);
+          @include size(2,49);
+          background-color: #707070;
+        }
+      }
+
+      @include mobile {
         display: none;
-    };
+      }
+    }
+
+    .openClose-wrap {
+      cursor: pointer;
+      @include marginTop(10);
+      @include size(35, 16);
+      .openClose {
+        @include marginLeft(5);
+        @include size(35, 2);
+        border: 5px;
+        background-color: black;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          @include top(8);
+          @include left(0);
+          @include size(35, 2);
+          border: 5px;
+          background-color: black;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          @include top(16);
+          @include left(0);
+          @include size(35, 2);
+          border: 5px;
+          background-color: black;
+        }
+      }
+    }
+  }
 }
-
-
-
-
-
-
-
-
