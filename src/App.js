@@ -5,11 +5,13 @@ import Footer from './components/Footer.jsx';
 import Home from './components/Home.jsx'
 import Company from './components/Company.jsx'
 import Techno from './components/Techno.jsx';
-import Plants from './components/Plants.jsx';
+import Plants from './components/Plants/Plants.jsx';
+import Plant from './components/Plants/Plant.jsx';
 import Economic from './components/Economic.jsx';
 import Contact from './components/Contact.jsx';
 import Form from './components/Form.jsx'
 import Archive from './components/Archive.jsx';
+
 
 function App() {
   
@@ -52,10 +54,15 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/company" element={<Company/>} />
             <Route path="/techno" element={<Techno/>} />
-            <Route path="/plants" element={<Plants/>} />
             <Route path="/economic" element={<Economic/>} />
             <Route path="/archive" element={<Archive/>} />
             <Route path="/contact" element={<Contact showForm={showForm}/>} />
+
+            <Route path="/plants" element={<Plants/>} />
+            <Route path="/plants/moim" element={<Plant name='Moim'/>} />
+            <Route path="/plants/mepho" element={<Plant name='Mepho'/>} />
+            <Route path="/plants/ksor" element={<Plant name='Ksor'/>} />
+            <Route path="/plants/murm" element={<Plant name='Murm'/>} />
           </Routes>
           <Footer showForm={showForm}/>
         </Router>

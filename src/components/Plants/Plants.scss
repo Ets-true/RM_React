@@ -1,0 +1,147 @@
+@import "../../scss/mixin.scss";
+
+
+.Plants{
+  .Warm{
+    @include height(1790);
+    width: 100%;
+    background-color: #FFFFFA;
+    .Warm-body{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .orange-blot{
+        z-index: 0;
+        position: absolute;
+        @include size(1690,960);
+        overflow: hidden;
+        opacity: 0.35;
+        img{
+          width: auto;
+          height: auto;
+          transform: translateY(-20%)
+        }
+      }
+      .About{
+        z-index: 100;
+        @include paddingTop(101);
+        @include paddingLeft(278);
+        .about-title{
+
+        }
+        .about-info{
+          display: flex;
+          align-items: center;
+          @include marginTop(42);
+          .info-text{
+            @include paddingTop(45);
+            p{
+              @include width(586);
+              @include marginBottom(71);
+            }
+          }
+          .info-img{
+            @include marginLeft(98);
+            @include size(758,345);
+            @include borderRadius(20);
+            position: relative;
+            .info-img-blur{
+              transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0; left: 0;
+              backdrop-filter: blur(8px);
+              @include borderRadius(20);
+            }
+            img{
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+      .ServiceOr{
+        @include marginTop(351);
+        @include paddingLeft(278);
+        .title{}
+        .text-1{
+          @include marginTop(50);
+          @include width(1104);
+        }
+        .tezis-group{
+          display: flex;
+          @include marginTop(88);
+          @include paddingLeft(209);
+          .tezis-column{
+            @include marginRight(107);
+            &:nth-child(2){
+              .tezis:nth-child(2){
+                @include width(535);
+              }
+            }
+            .tezis{
+              @include marginTop(25);
+              @include paddingLeft(28);
+              @include width(375);
+              position: relative;
+              &::after{
+                content: '';
+                position: absolute;
+                @include top(9);
+                @include left(0);
+                @include size(8,8);
+                @include borderRadius(4);
+                background-color: black;
+              }
+            }
+          }
+        }
+        .text-2{
+          @include marginTop(118);
+        }
+      }
+      .Catalog{
+        @include paddingLeft(278);
+        @include marginTop(150);
+        font-family: "Montserrat-Regular";
+       .row{
+        display: flex;
+        @include marginBottom(241);
+        .plant{
+          cursor: pointer;
+          @include marginRight(264);
+          .plant-img{
+            @include size(564,291);
+            overflow: hidden;
+            @include borderRadius(20);
+            img{
+              transition: all 0.3s;
+              width: 100%;
+              height: auto;
+              &:hover{
+                transform: scale(1.03)
+              }
+            }
+          }
+          .plant-title{
+            @include fontSize(26);
+            @include marginTop(35);
+          }
+          .plant-info{
+            @include fontSize(18);
+            @include width(564);
+            @include marginTop(20);
+          }
+        }
+       }
+      }
+
+    }
+  }
+  .Cold{
+    @include height(1226);
+    width: 100%;
+    background-color: #F8F9FA;
+  }
+}
