@@ -1,0 +1,215 @@
+@import "../../scss/mixin.scss";
+
+.Plant {
+  .warm-background {
+    @include height(1316+101);
+    background-color: #FFFFFA;
+    .block-init {
+      @include paddingTop(101);
+      @include paddingLeft(278);
+
+      .init-title {}
+
+      .init-info {
+        display: flex;
+        align-items: center;
+
+        .init-text {
+          @include marginRight(97);
+
+          p {
+            @include width(638);
+            @include marginTop(87);
+          }
+
+          .init-points {
+            @include marginTop(58);
+
+            .init-point {
+              @include marginBottom(25);
+              display: flex;
+              font-family: "Montserrat-Regular";
+              @include fontSize(20);
+
+              .point-num {
+                color: #F7931E;
+                @include marginRight(26);
+              }
+            }
+          }
+        }
+
+        .init-img {
+          @include size(673, 347);
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+    .block-property{
+      @include marginTop(314);
+      @include paddingLeft(234);
+      .property-title{
+        @include paddingLeft(44);
+      }
+      .properties{
+        display: flex;
+        justify-content: space-between;
+        @include width(1452);
+        @include marginTop(87);
+        .property{
+          @include width(410);
+          @include height(70);
+          font-family: 'Montserrat-Regular';
+          @include fontSize(20);
+          text-align: center;
+          position: relative;
+          @include property(line-height,24);
+          &::after{
+            content: '';
+            position: absolute;
+            @include width(360);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            background: linear-gradient(to right, black 0%, #F27300 60%)
+          }
+        }
+      }
+    }
+  }
+
+  .cold-background {
+    background-color: #F8F9FA;
+    @include height(2500);
+    .block-character{
+      @include paddingTop(103);
+      @include paddingLeft(140);
+      .character-title{
+        @include paddingLeft(138);
+      }
+      .Table{
+        @include marginBottom(215);
+        @include marginTop(105);
+        @include width(1640);
+        font-family: 'Montserrat-Regular';
+        height: auto;
+        transition: height 0.3s;
+        .Table-name{
+          @include fontSize(20);
+          width: 100%;
+          @include height(54);
+          position: relative;
+          &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background-color: #707070;
+          }
+        }
+        .Table-columns{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          @include marginTop(14);
+          @include marginBottom(20);
+          .column{
+            @include fontSize(22);
+            @include height(38);
+            position: relative;
+            &::before{
+              content: '';
+              position: absolute;
+              bottom: 0; left: 0;
+              width: 100%;
+              height: 1px;
+              background-color: #707070;
+            }
+            &:nth-child(1){
+              @include width(131);
+            }
+            &:nth-child(2){
+              @include width(603);
+            }
+            &:nth-child(3){
+              @include width(285);
+            }
+            &:nth-child(4){
+              @include width(517);
+            }
+          }
+        }
+        .Table-rows{
+          @include fontSize(22);
+          .row{
+            display: flex;
+            justify-content: space-between;
+            @include marginBottom(48);
+            .value{
+              &:nth-child(1){
+                @include width(131);
+              }
+              &:nth-child(2){
+                @include width(603);
+              }
+              &:nth-child(3){
+                @include width(285);
+              }
+              &:nth-child(4){
+                @include width(517);
+              }
+            }
+          }
+        }
+        .sub{
+          display: none;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+        .button{
+          @include width(36);
+          cursor: pointer;
+          height: auto;
+          margin: auto;
+          .circle{
+            transition: all 0.3s;
+            cursor: pointer;
+            margin: auto;
+            @include size(8,8);
+            position: relative;
+            background-color: #9C9C9C;
+            @include borderRadius(4);
+            &:hover{
+              background-color: orange;
+            }
+            &::before{
+              content: '';
+              position: absolute;
+              top: 0;
+              @include left(-6-8);
+              @include size(8,8);
+              background-color: inherit;
+              @include borderRadius(4);
+            }
+            &::after{
+              content: '';
+              position: absolute;
+              top: 0;
+              @include left(6+8);
+              @include size(8,8);
+              background-color: inherit;
+              @include borderRadius(4);
+            }
+          }
+        }
+      }
+    }
+  }
+}

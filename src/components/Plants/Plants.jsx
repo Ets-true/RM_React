@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import './Plants.scss'
 import { plantsContent } from './Plants-Content';
+import { Link } from 'react-router-dom';
 
 export default function Plants() {
 
@@ -56,10 +57,30 @@ export default function Plants() {
                   return (
                     <div className="row" key={`row-${rowIndex}`}>
                       {row.map((plant,plantIndex)=>{
+                        let link
+                        console.log([rowIndex+1, plantIndex+1])
+                        let index = [rowIndex+1, plantIndex+1]
+                        console.log(index.toString())
+                        switch (index.toString()) {
+                          case '1,1':
+                            link = '/plants/moim'
+                            break;
+                          case '1,2':
+                            link = '/plants/mepho'
+                            break;
+                          case '2,1':
+                            link = '/plants/ksor'
+                            break;
+                          case '2,2':
+                            link = '/plants/murm'
+                            break;
+                          default:
+                            break;
+                        }
                         return (
                         <div className="plant" key={`row-${rowIndex}-${plantIndex}`}>
-                          <div className="plant-img"><img src={require(`./media/plants/${rowIndex+1}/${plantIndex+1}.png`)} alt="" /></div>
-                          <div className="plant-title">{plant.title}</div>
+                          <Link to={link}><div className="plant-img"><img src={require(`./media/plants/${rowIndex+1}/${plantIndex+1}.png`)} alt="" /></div></Link>
+                          <Link to={link}><div className="plant-title">{plant.title}</div></Link>
                           <div className="plant-info">{plant.info}</div>
                         </div>
                         )
