@@ -13,6 +13,7 @@
       .orange-blot{
         z-index: 0;
         position: absolute;
+        @include top(200);
         @include size(1690,960);
         overflow: hidden;
         opacity: 0.35;
@@ -99,6 +100,7 @@
         }
         .text-2{
           @include marginTop(118);
+          @include width(830);
         }
       }
       .Catalog{

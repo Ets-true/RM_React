@@ -21,7 +21,8 @@ export default function Navbar() {
         </div>
         <div class="header__column _r">
           <Link to="/techno" className="header__link">Технология</Link>
-          <Link to="/economic" className="header__link">Экономика</Link>
+          <Link to="/plants" className="header__link">Установки</Link>
+          {/* <Link to="/economic" className="header__link">Экономика</Link> */}
           <Link to="/contact" className="header__link">Контакты</Link>
         </div>
       </div>

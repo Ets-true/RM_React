@@ -19,8 +19,8 @@ function send() {
     const ftpConnect = vinylFTP.create(configFTP);
     gulp.src(`build/**/*.*`, {})
         // .pipe(ftpConnect.dest(`RM/public_html/`))
-        // .pipe(ftpConnect.dest(`Regeneration-oil/public_html/`));
-        .pipe(ftpConnect.dest(`RM-yandex/public_html/`));    
+        .pipe(ftpConnect.dest(`Regeneration-oil/public_html/`));
+        // .pipe(ftpConnect.dest(`RM-yandex/public_html/`));    
 }
 
 function watcher () {

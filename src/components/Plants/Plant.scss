@@ -32,6 +32,7 @@
               @include fontSize(20);
 
               .point-num {
+                @include width(28);
                 color: #F7931E;
                 @include marginRight(26);
               }
@@ -85,7 +86,8 @@
 
   .cold-background {
     background-color: #F8F9FA;
-    @include height(2500);
+    // @include height(2500);
+    @include paddingBottom(50);
     .block-character{
       @include paddingTop(103);
       @include paddingLeft(140);
@@ -209,6 +211,16 @@
             }
           }
         }
+      }
+      .Murm-attention{
+        font-family: "Montserrat-Regular";
+        @include fontSize(32);
+        @include width(1200);
+        color: grey;
+        text-align: center;
+        margin: auto;
+        @include marginTop(150);
+        @include marginBottom(150);
       }
     }
   }
