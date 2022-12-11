@@ -46,6 +46,7 @@
             @include size(758,345);
             @include borderRadius(20);
             position: relative;
+            overflow: hidden;
             .info-img-blur{
               transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
               width: 100%;
@@ -111,6 +112,11 @@
         display: flex;
         @include marginBottom(241);
         .plant{
+          &:hover{
+            .plant-title{
+              color: orange;
+            }
+          }
           cursor: pointer;
           @include marginRight(264);
           .plant-img{
@@ -127,6 +133,7 @@
             }
           }
           .plant-title{
+            transition: all 0.2s;
             @include fontSize(26);
             @include marginTop(35);
           }

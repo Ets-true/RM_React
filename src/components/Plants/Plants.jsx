@@ -92,11 +92,11 @@ export default function Plants() {
                             break;
                         }
                         return (
-                        <div className="plant wow animate__animated animate__fadeIn" data-wow-duration="0.8s" key={`row-${rowIndex}-${plantIndex}`}>
-                          <Link to={link}><div className="plant-img"><img src={require(`./media/plants/${rowIndex+1}/${plantIndex+1}.png`)} alt="" /></div></Link>
-                          <Link to={link}><div className="plant-title">{plant.title}</div></Link>
+                        <Link to={link}><div className="plant wow animate__animated animate__fadeIn" data-wow-duration="0.8s" key={`row-${rowIndex}-${plantIndex}`}>
+                          <div className="plant-img"><img src={require(`./media/plants/${rowIndex+1}/${plantIndex+1}.png`)} alt="" /></div>
+                          <div className="plant-title">{plant.title}</div>
                           <div className="plant-info">{plant.info}</div>
-                        </div>
+                        </div></Link>
                         )
                       })}
                     </div>
