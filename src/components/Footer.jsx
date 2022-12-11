@@ -22,8 +22,8 @@ export default function Footer(showForm) {
             <Link to="/archive" class="footer__form">Архив</Link>
             {/* <div class="footer__form">Написать нам</div> */}
             <div class="footer__email">info@reg-oils.ru</div>
-            {/* <div class="footer__phone"> +7 (499) 324-89-47</div> */}
-            <div class="footer__phone"> 8 (968) 985-83-03</div>
+            <div class="footer__phone"> +7 (499) 324-89-47</div>
+            {/* <div class="footer__phone"> 8 (968) 985-83-03</div> */}
         </div>
     </div>
   )
