@@ -1,4 +1,4 @@
-@import "mixin.scss";
+@import "../../scss/mixin.scss";
 
 .economic{
     background-color: #FFFFFA;
@@ -173,7 +173,7 @@
         transform: rotate(45deg);
         width: 70%;
         height: 100%;
-        background-image: url(../media/img/blot_blue.png) ;
+        background-image: url(../../media/img/blot_blue.png) ;
         background-position: center; 
         background-size: 100% 240%;
         background-repeat: none;

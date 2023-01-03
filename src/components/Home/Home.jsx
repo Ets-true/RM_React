@@ -1,14 +1,11 @@
 import React from 'react'
-import '../scss/home.scss'
-import schema from '../media/img/scheme.png'
-import schemaMob from '../media/img/scheme__mobile.png'
-import Footer from './../components/Footer';
+import './home.scss'
+import schema from '../../media/img/scheme.png'
+import schemaMob from '../../media/img/scheme__mobile.png'
 import { Link } from 'react-router-dom';
-import Form from './../components/Form';
 import { Helmet } from "react-helmet";
-import ReactWOW from 'react-wow'
 
-import { ReactComponent as IconFile } from '../media/icons/file.svg';
+import { ReactComponent as IconFile } from '../../media/icons/file.svg';
 
 
 
@@ -16,10 +13,6 @@ import { ReactComponent as IconFile } from '../media/icons/file.svg';
 export default function Home() {
 
   window.scrollTo(0, 0);
-  const style = {
-    height: '3000px',
-    backgroundColor: 'green'
-  }
   function showFooter() {
     document.querySelector('.footer').style.display = "flex"
     if (document.documentElement.clientWidth < 1000) {
@@ -29,6 +22,7 @@ export default function Home() {
   setTimeout(() => {
     showFooter()
   }, 300);
+  
   return (
     <div className="bd">
       <Helmet>

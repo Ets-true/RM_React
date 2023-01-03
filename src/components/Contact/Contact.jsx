@@ -1,12 +1,11 @@
 import React from 'react'
-import '../scss/contact.scss'
+import './contact.scss'
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
-import fileIcon from '../media/icons/file.svg'
-import logoImg from '../media/img/logo_short.png'
+import logoImg from '../../media/img/logo_short.png'
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom"
-import { ReactComponent as IconFile } from '../media/icons/file.svg';
+import { ReactComponent as IconFile } from '../../media/icons/file.svg';
 
 
 
@@ -35,8 +34,8 @@ export default function Contact(showForm) {
           <div className="contact-row">
             <div class="contacts__phone">
               <h2>Телефон</h2>
-              <p>8 (968) 985-8303</p>
-              {/* <p>+7 (499) 324-8947</p> */}
+              {/* <p>8 (968) 985-8303</p> */}
+              <p>+7 (499) 324-8947</p>
             </div>
             <div class="contacts__email">
               <h2>Почта</h2>

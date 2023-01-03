@@ -1,9 +1,8 @@
 import React from 'react'
-import '../scss/archive.scss'
+import './archive.scss'
 import { Helmet } from "react-helmet";
-import { ReactComponent as IconFile } from '../media/icons/file.svg';
+import { ReactComponent as IconFile } from '../../media/icons/file.svg';
 import {Link} from "react-router-dom"
-
 
 
 

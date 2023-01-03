@@ -1,4 +1,4 @@
-@import "mixin.scss";
+@import "../../scss/mixin.scss";
 
 .about {
   $var: adpt(1312);
@@ -47,7 +47,7 @@
     transform: translateY(-12%);
     @include size(812, 539);
     @include borderRadius(15);
-    background-image: url(../media/img/murm_photoshop_final.jpg);
+    background-image: url(../../media/img/murm_photoshop_final.jpg);
     background-size: cover;
     background-position: 50% 50%;
     image-rendering: -webkit-optimize-contrast;
@@ -224,37 +224,37 @@
     }
 
     .DGK_Prim {
-      background-image: url(../media/img/DGK_Prim.jpg);
+      background-image: url(../../media/img/DGK_Prim.jpg);
       background-size: cover;
       background-position: 50% 50%;
     }
 
     .DGK_Hab {
-      background-image: url(../media/img/DGK_Hab.jpg);
+      background-image: url(../../media/img/DGK_Hab.jpg);
       background-size: cover;
       background-position: 50% 50%;
     }
 
     .Smol {
-      background-image: url(../media/img/Smol.jpg);
+      background-image: url(../../media/img/Smol.jpg);
       background-size: cover;
       background-position: 50% 50%;
     }
 
     .DGK_Nyr {
-      background-image: url(../media/img/DGK_Nyr.jpg);
+      background-image: url(../../media/img/DGK_Nyr.jpg);
       background-size: cover;
       background-position: 50% 50%;
     }
 
     .DGK_Amur {
-      background-image: url(../media/img/DGK_Amur.jpg);
+      background-image: url(../../media/img/DGK_Amur.jpg);
       background-size: cover;
       background-position: 50% 50%;
     }
 
     .PMES {
-      background-image: url(../media/img/PMES.jpg);
+      background-image: url(../../media/img/PMES.jpg);
       background-size: cover;
       background-position: 50% 50%;
     }
@@ -282,26 +282,8 @@
       opacity: 0;
     }
 
-    // &::after{
-    //     content: '';
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     @include size(20,2);
-    //     background-color: white;
-    //     transform: translate3d(-74%,-100%,0) rotate(40deg);
-    // }
-    // &::before{
-    //     content: '';
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     @include size(20,2);
-    //     background-color: white;
-    //     transform: translate3d(0%,-100%,0) rotate(-40deg);
-    // }
+   
     .clients__arrow_bottom {
-      // display: none;
       @include size(14, 26);
       margin: auto;
       transition: all 0.8s;
@@ -350,25 +332,25 @@
     }
 
     .DGK {
-      background-image: url(../media/img/DGK.jpg);
+      background-image: url(../../media/img/DGK.jpg);
       background-size: cover;
       background-position: 0% 50%;
     }
 
     .DGK_HAB {
-      background-image: url(../media/img/DGK_H.jpg);
+      background-image: url(../../media/img/DGK_H.jpg);
       background-size: cover;
       background-position: 10% 50%;
     }
 
     .Sozidanie {
-      background-image: url(../media/img/Sozidanie.jpg);
+      background-image: url(../../media/img/Sozidanie.jpg);
       background-size: cover;
       background-position: 10% 50%;
     }
 
     .rosseti {
-      background-image: url(../media/img/Rosseti.jpg);
+      background-image: url(../../media/img/Rosseti.jpg);
       background-size: cover;
       background-position: 50% 50%;
     }

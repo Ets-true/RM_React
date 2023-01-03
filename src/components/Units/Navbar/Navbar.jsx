@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import '../scss/header.scss'
-import logo from '../media/img/logo_full.png'
-import $ from 'jquery'
-import {location} from 'jquery'
+import './header.scss'
+import logo from '../../../media/img/logo_full.png'
 
 
 export default function Navbar() {

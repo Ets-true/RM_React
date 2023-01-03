@@ -1,14 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import arrow from '../media/icons/arrow_white.svg'
-import './../scss/company.scss'
-import $ from 'jquery';
-import {Link} from "react-router-dom"
+import arrow from '../../media/icons/arrow_white.svg'
+import './company.scss'
 import { HashLink } from 'react-router-hash-link';
-
-
-
-
 
 
 function SamplePrevArrow(props) {
@@ -28,9 +22,6 @@ function SampleNextArrow(props) {
         </div>
     );
 }
-
-
-    
 
 
 function opacity(next){

@@ -16,7 +16,7 @@ import controlImg from '../media/img/control.jpg'
 import TechnoSlider from './TechnoSlider'
 
 import "../scss/techno.scss"
-import Footer from './Footer'
+import Footer from '../Footer'
 import $ from 'jquery';
 import {Helmet} from "react-helmet";
 import { HashLink } from 'react-router-hash-link';

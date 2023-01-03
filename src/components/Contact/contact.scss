@@ -1,4 +1,4 @@
-@import "mixin.scss";
+@import "../../scss/mixin.scss";
 
 body {
   background-color: #FFFFFA;
@@ -114,7 +114,7 @@ body {
   }
 
   .contacts__map {
-    background-image: url(../media/img/logo_full.png);
+    background-image: url(../../media/img/logo_full.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;

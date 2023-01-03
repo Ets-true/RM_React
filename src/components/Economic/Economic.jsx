@@ -1,8 +1,7 @@
 import React from 'react'
-import '../scss/economic.scss'
-import Footer from './Footer';
+import './economic.scss'
 import { Helmet } from "react-helmet";
-import { ReactComponent as IconFile } from '../media/icons/file.svg';
+import { ReactComponent as IconFile } from '../../media/icons/file.svg';
 
 
 

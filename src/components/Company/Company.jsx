@@ -1,16 +1,11 @@
-import React, { useEffect }from 'react'
-import '../scss/company.scss'
-import Crumbs from './Crumbs'
-import Footer from "./Footer"
+import React from 'react'
+import './company.scss'
 import $ from 'jquery';
-// import Slider from "react-slick";
 import CompanySlider from './Slider'
 import { Helmet } from "react-helmet";
 
-// import Slider from "react-slick";
 
-
-import arrow from '../media/icons/arrow_white.svg'
+import arrow from '../../media/icons/arrow_white.svg'
 
 export default function () {
   window.scrollTo(0, 0);
@@ -34,14 +29,6 @@ export default function () {
 
   }
 
-  // useEffect(()=>{
-  //   if(document.documentElement.clientWidth < 1024) {
-  //     document.location.href = "/"
-  //   }
-  // }, [])
-
-
-
 
 return (
   <div className="about">
@@ -50,9 +37,8 @@ return (
       <title>Компания | РМ</title>
     </Helmet>
     <div className="about__aboutUs">
-      {/* <Crumbs /> */}
       <div className="aboutUs__info">
-        <div className="aboutUs__title wow animate__animated animate__fadeIn" data-wow-duration="1.5s"><h1>О нас</h1></div>
+        <div className="aboutUs__title wow animate__animated animate__fadeIn" data-wow-duration="1.5s"><h1>О насyar</h1></div>
         <div className="aboutUs__text wow animate__animated animate__fadeIn" data-wow-duration="1.5s" >
           <p>Наша компания является членом ассоциации "МикронИнтер",
             занимающейся разработкой, производством и внедрением оборудования по
@@ -135,11 +121,9 @@ return (
           </div>
         </div>
 
-        {/* <div onClick={()=>{diplay_hide('#hidden');return false;}} data-wow-offset="300" data-wow-duration="2s"> */}
         <div onClick={() => { diplay_hide('#hidden'); return false; }} className="clients__button wow animate__animated animate__fadeIn" data-wow-offset="100" data-wow-duration="1s">
           <img src={arrow} alt="" className="clients__arrow_bottom" id="arrowClients"></img>
         </div>
-        {/* </div> */}
       </div>
     </div>
 
@@ -155,7 +139,6 @@ return (
         </div>
       </div>
     </div>
-    {/* <Footer/> */}
   </div>
 
 )

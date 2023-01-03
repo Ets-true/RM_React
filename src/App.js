@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from './components/Navbar.jsx';
-import Footer from './components/Footer.jsx';
-import Home from './components/Home.jsx'
-import Company from './components/Company.jsx'
-import Techno from './components/Techno.jsx';
+import Navbar from './components/Units/Navbar/Navbar.jsx';
+import Footer from './components/Units/Footer/Footer.jsx';
+import Home from './components/Home/Home.jsx'
+import Company from './components/Company/Company.jsx'
+import Techno from './components/Techno/Techno.jsx';
 import Plants from './components/Plants/Plants.jsx';
 import Plant from './components/Plants/Plant.jsx';
-import Economic from './components/Economic.jsx';
-import Contact from './components/Contact.jsx';
-import Form from './components/Form.jsx'
-import Archive from './components/Archive.jsx';
+import Economic from './components/Economic/Economic.jsx';
+import Contact from './components/Contact/Contact.jsx';
+import Form from './components/Units/Form/Form.jsx'
+import Archive from './components/Archive/Archive.jsx';
 
 
 function App() {

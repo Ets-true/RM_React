@@ -1,11 +1,8 @@
-@import "mixin.scss";
+@import "../../scss/mixin.scss";
 
 .technology {
   background-color: #FFFFFA;
 }
-
-
-
 
 .technology__aboutTech {
   @include paddingTop(80);
@@ -222,7 +219,7 @@
         @include size(966,527);
         border-radius: 15px;
         background-color: grey;
-        background-image: url('../media/img/plant_murm.jpg');
+        background-image: url('../../media/img/plant_murm.jpg');
         background-size: cover;
         background-size: 115% auto;
         background-position: 90% 30%;
@@ -324,19 +321,19 @@
       opacity: 0;
     }
     .chemistry{
-      background-image: url('../media/img/plant_chemistry.jpg');
+      background-image: url('../../media/img/plant_chemistry.jpg');
       background-size: cover;
       background-size: 105% auto;
       background-position: 0% 50%;
     }
     .moim{
-      background-image: url('../media/img/plant_moim.jpg');
+      background-image: url('../../media/img/plant_moim.jpg');
       background-size: cover;
       background-size: 105% auto;
       background-position: 20% 35%;
     }
     .ksor{
-      background-image: url('../media/img/plant_ksor.jpg');
+      background-image: url('../../media/img/plant_ksor.jpg');
       background-size: cover;
       background-size: 105% auto;
       background-position: 0% 0%;
@@ -360,7 +357,7 @@
       @include left(400);
       width: 90%;
       height: 100%;
-      background-image: url(../media/img/blot_blue.png);
+      background-image: url(../../media/img/blot_blue.png);
       background-position: center;
       background-size: 120% 240%;
       background-repeat: none;
@@ -425,16 +422,6 @@
 
 }
 
-
-
-// a {
-//   font-family: "Montserrat-Regular";
-//   text-decoration: none;
-//   color: rgb(7, 7, 119);
-//   :hover{
-//     color:#F27300;
-//   }
-// }
 
 @media(max-width: 768px) {
   .technology {

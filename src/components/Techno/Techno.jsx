@@ -1,30 +1,13 @@
 import React from 'react'
 
-import fileIcon from '../media/icons/file.svg'
-import engineerIcon from '../media/icons/engineer.svg'
-import arrowWhiteIcon from '../media/icons/arrow_white.svg'
-import arrowBlackIcon from '../media/icons/arrow_black.svg'
-import { ReactComponent as ChemistryIcon } from '../media/icons/chemistry.icon.svg'
-import { ReactComponent as GearIcon } from '../media/icons/gear.icon.svg'
-import { ReactComponent as RegenerationIcon } from '../media/icons/regeneration.icon.svg'
-
-import boilerImg from '../media/img/boiler.jpg'
-import filterImg from '../media/img/filter.jpg'
-import deghydrationImg from '../media/img/dehydration.jpg'
-import adsorbentsImg from '../media/img/adsorbents.jpg'
-import controlImg from '../media/img/control.jpg'
-
-import plantMurm from '../media/img/plant_murm.jpg'
-
-import TechnoSlider from './TechnoSlider'
-
-import "../scss/techno.scss"
-import Footer from './Footer'
+import arrowBlackIcon from '../../media/icons/arrow_black.svg'
+import { ReactComponent as ChemistryIcon } from '../../media/icons/chemistry.icon.svg'
+import { ReactComponent as GearIcon } from '../../media/icons/gear.icon.svg'
+import { ReactComponent as RegenerationIcon } from '../../media/icons/regeneration.icon.svg'
+import "./techno.scss"
 import $ from 'jquery';
 import { Helmet } from "react-helmet";
 import { HashLink } from 'react-router-hash-link';
-import { useEffect } from 'react'
-
 
 
 

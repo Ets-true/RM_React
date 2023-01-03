@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import "../scss/form.scss"
+import "./form.scss"
 import $ from 'jquery'
 
 export default function Form(closeForm) {
