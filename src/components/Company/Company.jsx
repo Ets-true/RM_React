@@ -38,7 +38,7 @@ return (
     </Helmet>
     <div className="about__aboutUs">
       <div className="aboutUs__info">
-        <div className="aboutUs__title wow animate__animated animate__fadeIn" data-wow-duration="1.5s"><h1>О насyar</h1></div>
+        <div className="aboutUs__title wow animate__animated animate__fadeIn" data-wow-duration="1.5s"><h1>О нас</h1></div>
         <div className="aboutUs__text wow animate__animated animate__fadeIn" data-wow-duration="1.5s" >
           <p>Наша компания является членом ассоциации "МикронИнтер",
             занимающейся разработкой, производством и внедрением оборудования по

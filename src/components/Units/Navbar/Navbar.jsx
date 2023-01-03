@@ -40,8 +40,18 @@ export default function Navbar() {
         line.style.width = `${calc(35)}px`
       })
       links.forEach((link, index)=>{
-        if(index === 4 || index === 5 || index === 6){
+        if(index === 4 ){
           link.style.opacity = 1
+        }
+        if(index === 5){
+          setTimeout(() => {
+             link.style.opacity = 1
+          }, 150);
+        }
+        if(index === 6){
+          setTimeout(() => {
+            link.style.opacity = 1
+         }, 200);
         }
       })
     } else {
