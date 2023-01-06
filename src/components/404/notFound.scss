@@ -1,0 +1,60 @@
+@import "../../scss/mixin.scss";
+@import "../../scss/fonts.scss";
+
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFA;
+    position: relative;
+  .background-404{
+    font-family: 'Montserrat-Regular';
+    @include fontSize(500);
+    opacity: 0.03;
+    margin: auto;
+    text-align: center;
+  }
+  .attention{
+    position: absolute;
+    @include top(281);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    .title{
+      font-family: 'Montserrat-Bold';
+      @include fontSize(42);
+    }
+    .info{
+      font-family: 'Montserrat-Regular';
+      @include fontSize(26);
+      @include marginTop(31);
+    }
+    .button{
+      margin:auto;
+      @include marginTop(56);
+      @include size(572*0.8,78*0.8);
+      @include borderRadius(15);
+      background-color: #002266;
+      color: white;
+      text-align: center;
+      font-family: 'Montserrat-Regular';
+      @include fontSize(30*0.8);
+
+      @include paddingTop(12);
+
+      transition: all 0.3s;
+      cursor: pointer;
+       user-select: none;
+       &:hover {
+        box-shadow: 0px 0px 14px #00000047;
+      }
+
+      &:active {
+        background-color: #002266b2;
+        box-shadow: 0px 0px 0px #0000003a;
+      }
+    }
+  }
+}
+
+

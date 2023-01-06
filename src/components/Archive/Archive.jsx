@@ -15,7 +15,7 @@ export default function Archive() {
         <title>Архив | РМ</title>
       </Helmet>
       <div className="content__container">
-        <div className="archive__page"><Link to="/">Главная</Link> / Страница архива</div>
+        {/* <div className="archive__page"><Link to="/">Главная</Link> / Страница архива</div> */}
         <div className="archive__section">
           <div className="section__title">Научно-техническая документация</div>
           <div className="section__docs">

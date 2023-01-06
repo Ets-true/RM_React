@@ -72,9 +72,7 @@ export default function Plants() {
                     <div className="row" key={`row-${rowIndex}`}>
                       {row.map((plant,plantIndex)=>{
                         let link
-                        console.log([rowIndex+1, plantIndex+1])
                         let index = [rowIndex+1, plantIndex+1]
-                        console.log(index.toString())
                         switch (index.toString()) {
                           case '1,1':
                             link = '/plants/moim'

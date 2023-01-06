@@ -56,16 +56,14 @@
         background-color: white;
       }
 
-      ;
     }
   }
 
   .header-links-wrap{
     position: absolute;
-    @include right(65);
-    @include top(30);
-    width: 1400px;
-    height: 50px;
+    @include right(70);
+    @include top(32);
+    @include size(1400,50);
     overflow-x: hidden;
 
   .header-links {
@@ -101,10 +99,10 @@
         @include borderRadius(5);
         position: absolute;
         content: '';
-        @include bottom(-7);
+        @include bottom(-4);
         left: 50%;
         transform: translateX(-50%);
-        @include size(18,3);
+        @include size(21,3);
         background-color: orange;
       }
 
@@ -133,10 +131,26 @@
   .openClose-wrap {
     position: absolute;
     @include right(33);
-    @include top(30);
+    @include top(32);
     cursor: pointer;
     @include marginTop(10);
     @include size(35, 16);
+    &:hover{
+      .openClose{
+        &:nth-child(2) {
+          @include size(35,2);
+          // @include width(35);
+          // width: 35px;
+          // background-color: red;
+        }
+        &:nth-child(3) {
+          @include size(18,2);
+          // @include width(18);
+          // width: 18px;
+          // background-color: red;
+        }
+      }
+    }
     .openClose {
       display: block;
       transition: all 0.2s;
@@ -146,7 +160,7 @@
       background-color: black;
       position: relative;
       @include marginBottom(6);
-      float: right;
+      // float: right;
 
       &:nth-child(2){
         @include size(24,2);

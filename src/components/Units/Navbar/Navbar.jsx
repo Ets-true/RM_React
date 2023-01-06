@@ -13,6 +13,8 @@ export default function Navbar() {
     } else return val
   }
 
+  
+
   const defaultPagesList = [
     {name: 'Главная', url: '/'},
     {name: 'О компании', url: '/company'},
@@ -23,11 +25,6 @@ export default function Navbar() {
     {name: 'Архив', url: '/archive'},
   ]
 
-  // const hiddenPagesList = [
-  //   {name: 'Технология', url: '/techno'},
-  //   {name: 'Экономика', url: '/economic'},
-  //   {name: 'Архив', url: '/archive'},
-  // ]
 
   const [open, setOpen] = useState(false)
   useEffect(() => {
@@ -76,19 +73,46 @@ export default function Navbar() {
 
   const [Pages, setPages] = useState(defaultPagesList)
 
-  useEffect(()=>{
-
-  },[Pages])
+  let currentPage
+  useEffect(() => {
+    switch (window.location.pathname) {
+      case '/':
+        currentPage = {name: 'Главная', url: '/'}
+        break;
+      case '/company':
+        currentPage = {name: 'О компании', url: '/company'}
+        break;
+      case '/plants':
+        currentPage = {name: 'Установки', url: '/plants'}
+        break;
+      case '/contact':
+        currentPage = {name: 'Контакты', url: '/contact'}
+        break;
+      case '/techno':
+        currentPage = {name: 'Технология', url: '/techno'}
+        break;
+      case '/economic':
+        currentPage = {name: 'Экономика', url: '/economic'}
+        break;
+      case '/archive':
+        currentPage = {name: 'Архив', url: '/archive'}
+        break;
+      default:
+        currentPage = {name: 'Главная', url: '/'}
+        break;
+    }
+    changepage(currentPage)
+  }, [])
 
   const changepage = (page) => {
+    console.log(page)
     let copyPages = JSON.parse(JSON.stringify(defaultPagesList))
     let pageIndex
     copyPages.forEach((copyPage, i)=> {
       if(copyPage.name == page.name) pageIndex = i 
     });
-    console.log(page)
-    console.log(pageIndex)
     copyPages.splice(0, 0, copyPages.splice(pageIndex, 1)[0]);
+    console.log(copyPages)
     setPages([...copyPages])
     setOpen(false)
   }

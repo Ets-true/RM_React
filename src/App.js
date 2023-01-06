@@ -11,6 +11,7 @@ import Economic from './components/Economic/Economic.jsx';
 import Contact from './components/Contact/Contact.jsx';
 import Form from './components/Units/Form/Form.jsx'
 import Archive from './components/Archive/Archive.jsx';
+import NotFound from './components/404/NotFound.jsx';
 
 
 function App() {
@@ -63,6 +64,9 @@ function App() {
             <Route path="/plants/mepho" element={<Plant name='Mepho'/>} />
             <Route path="/plants/ksor" element={<Plant name='Ksor'/>} />
             <Route path="/plants/murm" element={<Plant name='Murm'/>} />
+
+
+            <Route path="*" element={<NotFound/>} />
           </Routes>
           <Footer showForm={showForm}/>
         </Router>
