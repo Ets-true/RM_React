@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
-import './header.scss'
+import './navbar.scss'
 import logo from '../../../media/img/logo_full.png'
-import $ from 'jquery'
 
 
 export default function Navbar() {
@@ -109,7 +108,7 @@ export default function Navbar() {
     let copyPages = JSON.parse(JSON.stringify(defaultPagesList))
     let pageIndex
     copyPages.forEach((copyPage, i)=> {
-      if(copyPage.name == page.name) pageIndex = i 
+      if(copyPage.name === page.name) pageIndex = i 
     });
     copyPages.splice(0, 0, copyPages.splice(pageIndex, 1)[0]);
     console.log(copyPages)
@@ -130,7 +129,7 @@ export default function Navbar() {
         <div className="header-links">
           {
             Pages.map((page,i) =>{
-              if(i == 0){
+              if(i === 0){
                 return <Link to={page.url} className="header-link header-link-active" key={`link-${i}`} onClick={() => changepage(page)}>{page.name}</Link>
               } else return <Link to={page.url} className="header-link" key={`link-${i}`} onClick={() => changepage(page)}>{page.name}</Link>
             })

@@ -2,732 +2,735 @@
 
 
 .home__mainTezis {
-    width: 100%;
-    height: 100vh;
-    background-image: url(../../media/img/murm-compressed.png);
-    background-size: cover;
-    background-position: 10% 80%;
-    @include paddingTop(133);
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../media/img/murm-compressed.png);
+  background-size: cover;
+  background-position: 10% 80%;
+  @include paddingTop(133);
+
+  @include mobile {
+    padding-top: 0;
+    max-height: 635px;
+    min-height: 400px;
+    padding-top: 50px;
+    background-position: 70% 50%;
+  }
+
+  .mainTezis__content {
+    @include size(1023, 225);
+    background-color: rgba(255, 255, 250, 1);
+    position: relative;
+    box-shadow: 0px 0px 24px #00000029;
 
     @include mobile {
-        padding-top: 0;
-        max-height: 635px;
-        min-height: 400px;
-        padding-top: 50px;
-        background-position: 70% 50%;
+      width: 346px;
+      height: 141px;
+      border-radius: 15px;
+      margin: auto;
+      padding-top: 27px;
     }
 
-    .mainTezis__content {
-        @include size(1023, 225);
-        background-color: rgba(255, 255, 250, 1);
-        position: relative;
-        box-shadow: 0px 0px 24px #00000029;
+    .mainTezis__text {
+      font-family: Montserrat-Bold;
+      position: absolute;
+      @include top(40);
+      @include left(140);
+      @include size(765, 66);
+      @include fontSize(27);
+      font-weight: bold;
+
+      @include mobile {
+        font-size: 16px;
+        line-height: 19px;
+        position: static;
+        width: 285px;
+        height: 57px;
+        margin: auto;
+      }
+    }
+
+    a {
+      @include mobile {
+        pointer-events: none;
+        cursor: default;
+      }
+
+      ;
+    }
+
+    .mainTezis__button {
+      transition: all 0.3s;
+      cursor: pointer;
+      user-select: none;
+      position: absolute;
+      @include top(141);
+      @include left(140);
+      @include size(175, 48);
+      background-color: #002266;
+      @include property(border-radius, 10);
+      text-align: center;
+      font-family: Montserrat-Regular;
+      @include fontSize(20);
+      color: white;
+      @include paddingTop(9);
+      position: relative;
+
+      @include mobile {
+        margin: auto;
+        margin-top: 20px;
+        width: 275px;
+        height: 29px;
+        border-radius: 0;
+        font-size: 10px;
+        border: 0;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: grey;
+        position: static;
+        background-color: #FFFFFA;
+      }
+
+      ;
+
+      &:hover {
+        box-shadow: 0px 0px 14px #00000047;
+      }
+
+      &:active {
+        background-color: #002266b2;
+        box-shadow: 0px 0px 0px #0000003a;
+
+      }
+
+      a {
+        color: white;
 
         @include mobile {
-            width: 346px;
-            height: 141px;
-            border-radius: 15px;
-            margin: auto;
-            padding-top: 27px;
+          color: black;
+          display: none;
         }
 
-        .mainTezis__text {
-            font-family: Montserrat-Bold;
-            position: absolute;
-            @include top(40);
-            @include left(140);
-            @include size(765, 66);
-            @include fontSize(27);
-            font-weight: bold;
-
-            @include mobile {
-                font-size: 16px;
-                line-height: 19px;
-                position: static;
-                width: 285px;
-                height: 57px;
-                margin: auto;
-            }
-        }
-
-        a {
-            @include mobile {
-                pointer-events: none;
-                cursor: default;
-            }
-
-            ;
-        }
-
-        .mainTezis__button {
-            transition: all 0.3s;
-            cursor: pointer;
-            user-select: none;
-            position: absolute;
-            @include top(141);
-            @include left(140);
-            @include size(175, 48);
-            background-color: #002266;
-            @include property(border-radius, 10);
-            text-align: center;
-            font-family: Montserrat-Regular;
-            @include fontSize(20);
-            color: white;
-            @include paddingTop(9);
-            position: relative;
-
-            @include mobile {
-                margin: auto;
-                margin-top: 20px;
-                width: 275px;
-                height: 29px;
-                border-radius: 0;
-                font-size: 10px;
-                border: 0;
-                border-top-width: 1px;
-                border-top-style: solid;
-                border-top-color: grey;
-                position: static;
-                background-color: #FFFFFA;
-            }
-
-            ;
-
-            &:hover {
-                box-shadow: 0px 0px 14px #00000047;
-            }
-
-            &:active {
-                background-color: #002266b2;
-                box-shadow: 0px 0px 0px #0000003a;
-
-            }
-
-            a {
-                color: white;
-
-                @include mobile {
-                    color: black;
-                    display: none;
-                }
-
-                ;
-            }
-        }
+        ;
+      }
     }
+  }
 }
 
 
 .home__diagram {
-    width: 100%;
-    @include property(height, 1007);
-    background-color: #F8F9FA;
-    @include paddingTop(94);
+  width: 100%;
+  @include property(height, 1007);
+  background-color: #F8F9FA;
+  @include paddingTop(94);
+
+  @include mobile {
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    padding-top: 37px;
+    padding-bottom: 42px;
+  }
+
+  ;
+
+  .diagram__content {
+    margin: auto;
+    @include size(1640, 790);
+    background-color: #FFFFFA;
+    @include property(border-radius, 15);
+    box-shadow: 0px 0px 24px #00000029;
+    position: relative;
 
     @include mobile {
-        max-width: 100%;
-        height: auto;
-        padding: 0;
-        padding-top: 37px;
-        padding-bottom: 42px;
+      width: 300px;
+      height: 629px;
+      margin: auto;
+      padding-top: 19px;
     }
 
     ;
 
-    .diagram__content {
+    .diagram__title {
+      position: absolute;
+      @include top(33);
+      @include left(138);
+      @include size(608, 48);
+
+      @include mobile {
+        position: static;
+        width: 158px;
         margin: auto;
-        @include size(1640, 790);
+        text-align: center;
+      }
+
+      ;
+    }
+
+    .diagram__text {
+      position: absolute;
+      @include top(125);
+      @include left(138);
+      @include size(995, 48);
+
+      @include mobile {
+        position: static;
+        width: 260px;
+        width: auto;
+        height: 128px;
+        margin: auto;
+        margin-top: 24px;
+        padding-left: 25px;
+        padding-right: 20px;
+      }
+
+      ;
+    }
+
+    .diagram__img {
+      position: absolute;
+      @include top(304);
+      @include left(62);
+      @include size(1517, 157);
+      transform: translatez(0);
+
+      @include mobile {
+        display: none;
+      }
+
+      ;
+    }
+
+    .diagram__img__mobile {
+      display: none;
+
+      @include mobile {
+        display: block;
+        width: 167px;
+        height: 345px;
+        margin: auto;
+        margin-top: 28px;
+      }
+
+      ;
+    }
+
+    a {
+      @include mobile {
+        pointer-events: none;
+        cursor: default;
+      }
+
+      ;
+
+    }
+
+    .diagram__button {
+      transition: all 0.3s;
+      position: absolute;
+      @include top(709);
+      @include left(1424);
+      @include size(175, 48);
+      background-color: #002266;
+      @include property(border-radius, 10);
+      text-align: center;
+      font-family: Montserrat-Regular;
+      @include fontSize(20);
+      @include paddingTop(9);
+      color: white;
+
+      @include mobile {
+        margin: auto;
+        margin-top: 23px;
+        width: 275px;
+        height: 29px;
+        border-radius: 0;
+        font-size: 10px;
+        border: 0;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: grey;
+        position: static;
         background-color: #FFFFFA;
-        @include property(border-radius, 15);
-        box-shadow: 0px 0px 24px #00000029;
-        position: relative;
+        display: none;
+      }
+
+      ;
+
+      a {
+        color: white;
 
         @include mobile {
-            width: 300px;
-            height: 629px;
-            margin: auto;
-            padding-top: 19px;
+          color: black;
         }
 
         ;
+      }
 
-        .diagram__title {
-            position: absolute;
-            @include top(33);
-            @include left(138);
-            @include size(608, 48);
+      &:hover {
+        box-shadow: 0px 0px 14px #00000047;
+      }
 
-            @include mobile {
-                position: static;
-                width: 158px;
-                margin: auto;
-                text-align: center;
-            }
+      &:active {
+        background-color: #002266b2;
+        box-shadow: 0px 0px 0px #0000003a;
 
-            ;
-        }
-
-        .diagram__text {
-            position: absolute;
-            @include top(125);
-            @include left(138);
-            @include size(995, 48);
-
-            @include mobile {
-                position: static;
-                width: 260px;
-                width: auto;
-                height: 128px;
-                margin: auto;
-                margin-top: 24px;
-                padding-left: 25px;
-                padding-right: 20px;
-            }
-
-            ;
-        }
-
-        .diagram__img {
-            position: absolute;
-            @include top(304);
-            @include left(62);
-            @include size(1517, 157);
-            transform: translatez(0);
-
-            @include mobile {
-                display: none;
-            }
-
-            ;
-        }
-
-        .diagram__img__mobile {
-            display: none;
-
-            @include mobile {
-                display: block;
-                width: 167px;
-                height: 345px;
-                margin: auto;
-                margin-top: 28px;
-            }
-
-            ;
-        }
-
-        a {
-            @include mobile {
-                pointer-events: none;
-                cursor: default;
-            }
-
-            ;
-
-        }
-
-        .diagram__button {
-            transition: all 0.3s;
-            position: absolute;
-            @include top(709);
-            @include left(1424);
-            @include size(175, 48);
-            background-color: #002266;
-            @include property(border-radius, 10);
-            text-align: center;
-            font-family: Montserrat-Regular;
-            @include fontSize(20);
-            @include paddingTop(9);
-            color: white;
-
-            @include mobile {
-                margin: auto;
-                margin-top: 23px;
-                width: 275px;
-                height: 29px;
-                border-radius: 0;
-                font-size: 10px;
-                border: 0;
-                border-top-width: 1px;
-                border-top-style: solid;
-                border-top-color: grey;
-                position: static;
-                background-color: #FFFFFA;
-                display: none;
-            }
-
-            ;
-
-            a {
-                color: white;
-
-                @include mobile {
-                    color: black;
-                }
-
-                ;
-            }
-
-            &:hover {
-                box-shadow: 0px 0px 14px #00000047;
-            }
-
-            &:active {
-                background-color: #002266b2;
-                box-shadow: 0px 0px 0px #0000003a;
-
-            }
-        }
+      }
     }
+  }
 }
 
 
 
 
 .home__EconomicTechnic {
+  width: 100%;
+  background: #FFFFFA;
+  position: relative;
+
+  .blot {
+    display: block;
+    position: absolute;
+    position: sticky;
+    @include top(75);
+    left: 0;
     width: 100%;
-    background: #FFFFFA;
+    @include height(800);
+
+    background-image: url(../../media/img/blot_orange.png);
+    background-position: center;
+    background-size: 85% 200%;
+    opacity: 0.4;
+
+    @include mobile {
+      position: sticky;
+      top: 270px;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      background-size: 150% 200%;
+
+    }
+
+    ;
+  }
+
+  // .home__economic {
+  //     @include marginTop(-700);
+
+  //     @include mobile {
+  //         margin-top: -300px;
+  //     }
+  // }
+
+  
+  .home__tezis-group {
+    &:nth-child(2) {
+      @include marginTop(-700);
+
+      @include mobile {
+        margin-top: -300px;
+      }
+    }
+
+    max-width: 100%;
+    @include property(height, 707);
     position: relative;
-    
-    .blot {
+
+    @include mobile {
+      padding-top: 29px;
+      height: auto;
+    }
+
+    .EconomicTechnic__title {
+      @include marginTop(45);
+      @include paddingLeft(279);
+      width: auto;
+      height: auto;
+
+      @include mobile {
+        padding-left: 0;
+        position: static;
+        margin: auto;
+        width: 320px;
+        text-align: center;
+      }
+
+  
+    }
+
+    .tezis__border {
+      position: absolute;
+      @include top(156);
+      left: 0;
+      width: 100%;
+      @include property(height, 551);
+      display: flex;
+      justify-content: center;
+      @include paddingLeft(279);
+
+      @include mobile {
+        position: static;
+        top: 0;
+        margin-top: 30px;
+        width: auto;
+        height: auto;
         display: block;
+        padding: 0;
+        position: relative;
+        margin-left: 36px;
+      }
+
+  
+
+      &::before {
+        content: '';
         position: absolute;
-        position: sticky;
-        @include top(75);
+        top: 0;
+        right: 0;
+        bottom: 0;
         left: 0;
-        width: 100%;
-        @include height(800);
-
-        background-image: url(../../media/img/blot_orange.png);
-        background-position: center;
-        background-size: 85% 200%;
-        opacity: 0.4;
-
-        @include mobile {
-            position: sticky;
-            top: 270px;
-            left: 0;
-            width: 100%;
-            height: 400px;
-            background-size: 150% 200%;
-
-        }
-
-        ;
-    }
-
-    .home__economic {
-        @include marginTop(-700);
-
-        @include mobile {
-            margin-top: -300px;
-        }
-
-        ;
-    }
-
-    .home__economic,
-    .home__technic {
         max-width: 100%;
-        @include property(height, 707);
+        height: 2px;
+        margin: -2px;
+        border-radius: inherit;
+        background: linear-gradient(to right, black 0%, #F27300 60%);
+
+        @include mobile {
+          position: absolute;
+          top: 15px;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 100%;
+          width: 2px;
+          border-radius: inherit;
+          background: linear-gradient(to bottom, black 0%, #F27300 60%);
+        }
+
+  
+      }
+
+      .tezis__column {
+        @include size(398, 551);
+        @include marginRight(154);
         position: relative;
 
         @include mobile {
-            padding-top: 29px;
-            // margin-top: -300px;
-            height: auto;
+          width: 330px;
+          height: auto;
+          position: static;
+          top: 0;
+          left: 0;
+          position: relative;
         }
 
-        ;
+  
 
-        .EconomicTechnic__title {
-            @include marginTop(45);
-            @include paddingLeft(279);
-            width: auto;
-            height: auto;
+        .tezis__point {
+          position: absolute;
+          @include top(-5);
+          @include size(9, 9);
+          @include property(border-radius, 5);
+          left: 0;
+          background-color: black;
 
-            @include mobile {
-                padding-left: 0;
-                position: static;
-                margin: auto;
-                width: 320px;
-                text-align: center;
-            }
-
-            ;
-        }
-
-        .tezis__border {
+          @include mobile {
             position: absolute;
-            @include top(156);
-            left: 0;
-            width: 100%;
-            @include property(height, 551);
-            display: flex;
-            justify-content: center;
-            @include paddingLeft(279);
+            left: -5px;
+            top: 10px;
+          }
 
-            @include mobile {
-                position: static;
-                top: 0;
-                margin-top: 30px;
-                width: auto;
-                height: auto;
-                display: block;
-                padding: 0;
-                position: relative;
-                margin-left: 36px;
-            }
-
-            ;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                max-width: 100%;
-                height: 2px;
-                margin: -2px;
-                border-radius: inherit;
-                background: linear-gradient(to right, black 0%, #F27300 60%);
-
-                @include mobile {
-                    position: absolute;
-                    top: 15px;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 2px;
-                    border-radius: inherit;
-                    background: linear-gradient(to bottom, black 0%, #F27300 60%);
-                }
-
-                ;
-            }
-
-            .tezis__column {
-                @include size(398, 551);
-                @include marginRight(154);
-                position: relative;
-
-                @include mobile {
-                    width: 330px;
-                    height: auto;
-                    position: static;
-                    top: 0;
-                    left: 0;
-                    position: relative;
-                }
-
-                ;
-
-                .tezis__point {
-                    position: absolute;
-                    @include top(-5);
-                    @include size(9, 9);
-                    @include property(border-radius, 5);
-                    left: 0;
-                    background-color: black;
-
-                    @include mobile {
-                        position: absolute;
-                        left: -5px;
-                        top: 10px;
-                    }
-
-                    ;
-                }
-
-                .tezis__digit {
-                    @include marginTop(41);
-                    @include fontSize(35);
-                    font-family: Montserrat-Bold;
-
-                    @include mobile {
-                        width: 44px;
-                        height: 43px;
-                        position: static;
-                        font-size: 20px;
-                        margin-left: 30px;
-                        margin-bottom: 52px;
-                    }
-
-                    ;
-                }
-
-                .tezis__title {
-                    @include marginTop(42);
-                    @include property(height, 42);
-
-                    @include mobile {
-                        width: 300px;
-                        height: 60px;
-                        position: static;
-                        margin-left: 30px;
-                        margin-top: 0;
-                        margin-bottom: 30px;
-                    }
-
-                    ;
-                }
-
-                .tezis__text {
-                    @include marginTop(60);
-
-                    @include mobile {
-                        width: 300px;
-                        height: 72px;
-                        position: static;
-                        margin-left: 30px;
-                        margin-bottom: 52px;
-                    }
-
-                    ;
-                }
-            }
+        
         }
 
+        .tezis__digit {
+          @include marginTop(41);
+          @include fontSize(35);
+          font-family: Montserrat-Bold;
+
+          @include mobile {
+            width: 44px;
+            height: 43px;
+            position: static;
+            font-size: 20px;
+            margin-left: 30px;
+            margin-bottom: 52px;
+          }
+
+ 
+        }
+
+        .tezis__title {
+          @include marginTop(42);
+          @include property(height, 42);
+
+          @include mobile {
+            width: 300px;
+            height: 60px;
+            position: static;
+            margin-left: 30px;
+            margin-top: 0;
+            margin-bottom: 30px;
+          }
+
+        }
+
+        .tezis__text {
+          @include marginTop(60);
+
+          @include mobile {
+            width: 300px;
+            height: 72px;
+            position: static;
+            margin-left: 30px;
+            margin-bottom: 52px;
+          }
+
+          ;
+        }
+      }
     }
+
+  }
 }
 
 
 .home__ecological {
-    width: 100%;
-    @include property(height, 805);
-    background-color: #F8F9FA;
-    position: relative;
-    @include paddingTop(94);
+  width: 100%;
+  @include property(height, 805);
+  background-color: #F8F9FA;
+  position: relative;
+  @include paddingTop(94);
+
+  @include mobile {
+    height: auto;
+    padding: 0;
+    padding-top: 45px;
+    padding-bottom: 94px;
+  }
+
+  ;
+
+  .ecological__title {
+    width: auto;
+    @include property(height, 45);
+    @include paddingLeft(275);
 
     @include mobile {
-        height: auto;
-        padding: 0;
-        padding-top: 45px;
-        padding-bottom: 94px;
+      padding-left: 0;
+      text-align: center;
+      // width: 304px;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  .ecological__text {
+    @include marginTop(50);
+    @include paddingLeft(275);
+    @include width(780+275);
+
+    @include mobile {
+      padding-left: 0;
+      width: 304px;
+      height: auto;
+      position: static;
+      margin: auto;
+      margin-top: 30px;
+    }
+
+  }
+
+  .ecological__wrapper {
+    @include marginLeft(140);
+    @include width(1640);
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      margin-left: 0;
+      margin: auto;
+      width: 304px;
+      display: block;
+      // display: none;
     }
 
     ;
 
-    .ecological__title {
-        width: auto;
-        @include property(height, 45);
-        @include paddingLeft(275);
+    .ecological__column {
+      @include marginTop(140);
+      @include marginRight(0);
+      @include size(673, 413);
+      position: relative;
+
+      @include mobile {
+        margin: 0;
+        width: 304px;
+        height: auto;
+        position: static;
+        position: relative;
+        margin: auto;
+        margin-top: 57px;
+        padding-top: 39px;
+      }
+
+      ;
+
+      ._l {}
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 2px;
+        bottom: 0;
+        left: 0px;
+        height: 2px;
+        margin: -2px;
+        border-radius: inherit;
+        background: linear-gradient(to right, #F27300 0%, black 100%);
+      }
+
+      .ecological__digit {
+        position: absolute;
+        @include top(-2);
+        @include size(69, 69);
+        right: 0;
+        border: 2px;
+        border-style: solid;
+        border-color: black;
+        font-family: Montserrat-Bold;
+        @include fontSize(35);
+        @include paddingTop(9);
+        padding-left: 0px;
 
         @include mobile {
-            padding-left: 0;
+          position: absolute;
+          right: 0;
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+          padding-top: 9px;
+          padding-left: 0px;
+        }
+
+        ;
+
+        .digit {
+          text-align: center;
+          @include marginTop(-5);
+
+          @include mobile {
             text-align: center;
-            // width: 304px;
-            height: auto;
-            margin: auto;
+          }
+
+          ;
         }
+      }
 
-        ;
-    }
-
-    .ecological__text {
-        @include marginTop(50);
-        @include paddingLeft(275);
-
-        @include mobile {
-            padding-left: 0;
-            width: 304px;
-            height: auto;
-            position: static;
-            margin: auto;
-            margin-top: 30px;
-        }
-
-        ;
-
-    }
-
-    .ecological__wrapper {
+      .ecological_tezisTitle {
+        margin: auto;
+        @include marginTop(65);
         @include marginLeft(140);
-        @include width(1640);
-        display: flex;
-        justify-content: space-between;
 
         @include mobile {
-            margin-left: 0;
-            margin: auto;
-            width: 304px;
-            display: block;
-            // display: none;
+          margin: 0;
+          width: 200px;
+          height: auto;
+        }
+
+        ;
+      }
+
+      .ecological_tezisText {
+        margin: auto;
+        @include marginTop(35);
+        @include marginLeft(140);
+        @include width(400);
+        @include mobile {
+          margin: 0;
+          width: 304px;
+          margin-top: 24px;
         }
 
         ;
 
-        .ecological__column {
-            @include marginTop(140);
-            @include marginRight(0);
-            @include size(673, 413);
-            position: relative;
-
-            @include mobile {
-                margin: 0;
-                width: 304px;
-                height: auto;
-                position: static;
-                position: relative;
-                margin: auto;
-                margin-top: 57px;
-                padding-top: 39px;
-            }
-
-            ;
-
-            ._l {}
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 2px;
-                bottom: 0;
-                left: 0px;
-                height: 2px;
-                margin: -2px;
-                border-radius: inherit;
-                background: linear-gradient(to right, #F27300 0%, black 100%);
-            }
-
-            .ecological__digit {
-                position: absolute;
-                @include top(-2);
-                @include size(69, 69);
-                right: 0;
-                border: 2px;
-                border-style: solid;
-                border-color: black;
-                font-family: Montserrat-Bold;
-                @include fontSize(35);
-                @include paddingTop(9);
-                padding-left: 0px;
-
-                @include mobile {
-                    position: absolute;
-                    right: 0;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 20px;
-                    padding-top: 9px;
-                    padding-left: 0px;
-                }
-
-                ;
-
-                .digit {
-                    text-align: center;
-                    @include marginTop(-5);
-
-                    @include mobile {
-                        text-align: center;
-                    }
-
-                    ;
-                }
-            }
-
-            .ecological_tezisTitle {
-                margin: auto;
-                @include marginTop(65);
-                @include marginLeft(140);
-
-                @include mobile {
-                    margin: 0;
-                    width: 200px;
-                    height: auto;
-                }
-
-                ;
-            }
-
-            .ecological_tezisText {
-                margin: auto;
-                @include marginTop(35);
-                @include marginLeft(140);
-
-                @include mobile {
-                    margin: 0;
-                    width: 304px;
-                    margin-top: 24px;
-                }
-
-                ;
-
-            }
-        }
+      }
     }
+  }
 }
 
 
 .home__results {
-    @include paddingTop(66);
-    // @include paddingLeft(278);
-    // @include paddingRight(214);
-    @include paddingBottom(264);
-    background-color: #F8F9FA;
-    @include mobile {
-        display: none;
-    };
+  @include paddingTop(66);
+  // @include paddingLeft(278);
+  // @include paddingRight(214);
+  @include paddingBottom(264);
+  background-color: #F8F9FA;
 
-    .results__title {
-        font-family: "SourceSerif4-Bold";
-        @include marginLeft(278);
-        @include fontSize(35);
-        position: relative;
-        @include width(660);
+  @include mobile {
+    display: none;
+  }
 
-        &::after {
-            content: '';
-            position: absolute;
-            @include bottom(-20);
-            left: 0;
-            width: 69%;
-            height: 2px;
-            background: linear-gradient(to right, #F27300 0%, black 100%);
-        }
+  ;
+
+  .results__title {
+    font-family: "SourceSerif4-Bold";
+    @include marginLeft(278);
+    @include fontSize(35);
+    position: relative;
+    @include width(660);
+
+    &::after {
+      content: '';
+      position: absolute;
+      @include bottom(-20);
+      left: 0;
+      width: 69%;
+      height: 2px;
+      background: linear-gradient(to right, #F27300 0%, black 100%);
     }
+  }
 
-    .results__resultRow {
-        display: flex;
-        @include marginTop(133);
-        @include marginLeft(278);
+  .results__resultRow {
+    display: flex;
+    @include marginTop(133);
+    @include marginLeft(278);
 
-        .result__example {
-            @include marginLeft(156);
+    .result__example {
+      @include marginLeft(156);
 
-            a {
-                transition: all 0.2s;
-                color: black;
+      a {
+        transition: all 0.2s;
+        color: black;
 
-                &:hover {
-                    color: #F27300;
-                }
-            }
-
-            &:nth-child(1) {
-                margin-left: 0;
-            }
-
-            .result__name {
-                font-family: "Montserrat-Regular";
-                @include fontSize(22);
-                text-align: center;
-            }
-
-            .result__file-icon {
-                margin: auto;
-                @include size(39, 44);
-                @include marginTop(40);
-
-                svg {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
+        &:hover {
+          color: #F27300;
         }
+      }
+
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+
+      .result__name {
+        font-family: "Montserrat-Regular";
+        @include fontSize(22);
+        text-align: center;
+        @include width(415);
+      }
+
+      .result__file-icon {
+        margin: auto;
+        @include size(39, 44);
+        @include marginTop(40);
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
+  }
 }
