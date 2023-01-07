@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from './components/Units/Navbar/Navbar.jsx';
-import Footer from './components/Units/Footer/Footer.jsx';
-import Home from './components/Home/Home.jsx'
-import Company from './components/Company/Company.jsx'
-import Techno from './components/Techno/Techno.jsx';
-import Plants from './components/Plants/Plants.jsx';
-import Plant from './components/Plants/Plant.jsx';
-import Economic from './components/Economic/Economic.jsx';
-import Contact from './components/Contact/Contact.jsx';
-import Form from './components/Units/Form/Form.jsx'
-import Archive from './components/Archive/Archive.jsx';
-import NotFound from './components/404/NotFound.jsx';
+import Navbar from './components/Units/Navbar/Navbar';
+import Footer from './components/Units/Footer/Footer';
+import Main from './components/main/main.page'
+import Company from './components/Company/Company'
+import Techno from './components/Techno/Techno';
+import Plants from './components/Plants/Plants';
+import Plant from './components/Plants/Plant';
+import Economic from './components/economic/economic.page';
+import Contact from './components/Contact/Contact';
+import Form from './components/Units/Form/Form'
+import Archive from './components/Archive/Archive';
+import NotFound from './components/404/NotFound';
 
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
           <Form closeForm={closeForm}/>
           <Navbar/>
           <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/" element={<Main/>} />
             <Route path="/company" element={<Company/>} />
             <Route path="/techno" element={<Techno/>} />
             <Route path="/economic" element={<Economic/>} />

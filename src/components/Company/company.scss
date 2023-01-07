@@ -13,7 +13,6 @@
 
 .about__aboutUs {
   width: 100%;
-  // @include property(height,710);
   @include height(710);
   max-width: 2000px;
   margin: auto;
@@ -40,6 +39,7 @@
 
     .aboutUs__text {
       @include marginTop(25);
+      @include width(660);
     }
   }
 
@@ -212,6 +212,12 @@
       @include size(260, 72);
       @include borderRadius(15);
       @include marginTop(52);
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: auto;
+        transform: translateY(-25%)
+      }
     }
 
     .client__name {
@@ -221,42 +227,6 @@
     .client__work {
       @include marginTop(64);
       @include width(536);
-    }
-
-    .DGK_Prim {
-      background-image: url(../../media/img/DGK_Prim.jpg);
-      background-size: cover;
-      background-position: 50% 50%;
-    }
-
-    .DGK_Hab {
-      background-image: url(../../media/img/DGK_Hab.jpg);
-      background-size: cover;
-      background-position: 50% 50%;
-    }
-
-    .Smol {
-      background-image: url(../../media/img/Smol.jpg);
-      background-size: cover;
-      background-position: 50% 50%;
-    }
-
-    .DGK_Nyr {
-      background-image: url(../../media/img/DGK_Nyr.jpg);
-      background-size: cover;
-      background-position: 50% 50%;
-    }
-
-    .DGK_Amur {
-      background-image: url(../../media/img/DGK_Amur.jpg);
-      background-size: cover;
-      background-position: 50% 50%;
-    }
-
-    .PMES {
-      background-image: url(../../media/img/PMES.jpg);
-      background-size: cover;
-      background-position: 50% 50%;
     }
   }
 
@@ -323,36 +293,17 @@
       @include borderRadius(15);
       position: relative;
       @include marginLeft(50);
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: auto;
+      }
 
       &:hover {
         cursor: pointer;
         transition: all 0.5s;
         transform: scale(1.07);
       }
-    }
-
-    .DGK {
-      background-image: url(../../media/img/DGK.jpg);
-      background-size: cover;
-      background-position: 0% 50%;
-    }
-
-    .DGK_HAB {
-      background-image: url(../../media/img/DGK_H.jpg);
-      background-size: cover;
-      background-position: 10% 50%;
-    }
-
-    .Sozidanie {
-      background-image: url(../../media/img/Sozidanie.jpg);
-      background-size: cover;
-      background-position: 10% 50%;
-    }
-
-    .rosseti {
-      background-image: url(../../media/img/Rosseti.jpg);
-      background-size: cover;
-      background-position: 50% 50%;
     }
 
     a {

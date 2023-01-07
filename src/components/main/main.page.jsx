@@ -1,17 +1,18 @@
 import React from 'react'
-import './home.scss'
+import './main.style.scss'
 import schema from '../../media/img/scheme.png'
 import schemaMob from '../../media/img/scheme__mobile.png'
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import { ReactComponent as IconFile } from '../../media/icons/file.svg';
-import { homeContent as content } from './Home-content';
+import { homeContent as content } from './main.content';
+import { animIU, animI } from '../../helpers/Constants';
 
 
 
 
-export default function Home() {
+export default function Main() {
 
   window.scrollTo(0, 0);
   function showFooter() {
@@ -25,8 +26,6 @@ export default function Home() {
     showFooter()
   }, 300);
 
-  const animIU = 'wow animate__animated animate__fadeInUp'
-  const animI = 'wow animate__animated animate__fadeIn'
   
   return (
     <div className={`bd`}>

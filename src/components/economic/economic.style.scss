@@ -15,6 +15,10 @@
     position: relative;
     .economicBenefit__textTop {
         @include marginTop(45);
+        @include width(1390);
+    }
+    .economicBenefit__textLeft{
+        @include width(455);
     }
     .economic__wrapper{
         display: flex;
@@ -35,6 +39,11 @@
                 box-shadow: 0px 0px 24px #00000029;
                 .initData__tezis{
                     display: flex;
+                    &:nth-child(3){
+                        .initData__el{
+                            @include width(590);
+                        }
+                    }
                     .initData__point{
                         @include size(8,8);
                         @include borderRadius(4);
@@ -45,6 +54,7 @@
                     .initData__el{
                         @include marginLeft(45);
                         @include marginBottom(32);
+                        @include width(660);
                     }
                 }
             }
@@ -119,6 +129,14 @@
                 .Col__tezis{
                     display: flex;
                     font-family: Montserrat-Bold;
+                    @include width(495);
+                    &:nth-child(2){
+                        @include width(239);
+                        @include marginLeft(64);
+                    }
+                    &:nth-child(3){
+                        @include marginLeft(30);
+                    }
                     @include fontSize(20);
                     .Col__point{
                         flex-shrink: 0;
@@ -132,16 +150,9 @@
                         @include marginLeft(15);
                     }
                 }
-                ._action{
-                    @include width(495);
-                }
-                ._time{
-                    @include width(239);
-                    @include marginLeft(64);
-                }
-                ._cost{
-                    @include marginLeft(30);
-                }
+                // ._action{
+                //     @include width(495);
+                // }
             }
         }
     }
