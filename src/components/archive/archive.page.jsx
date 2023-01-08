@@ -1,8 +1,8 @@
 import React from 'react'
-import './archive.scss'
+import './archive.style.scss'
 import { Helmet } from "react-helmet";
 import { ReactComponent as IconFile } from '../../media/icons/file.svg';
-import { archiveContent } from './Archive-content';
+import { archiveContent as content } from './archive.content';
 
 
 
@@ -15,7 +15,7 @@ export default function Archive() {
         <title>Архив | РМ</title>
       </Helmet>
       <div className="content__container">
-      {archiveContent.sections.map((section, sectionIndex)=>{
+      {content.sections.map((section, sectionIndex)=>{
         console.log(section)
         return(
           <div className="archive__section" key={`section-${sectionIndex}`}>

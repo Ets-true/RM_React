@@ -1,9 +1,9 @@
 import React from 'react'
-import './company.scss'
+import './company.style.scss'
 import $ from 'jquery';
 import CompanySlider from './Slider'
 import { Helmet } from 'react-helmet';
-import { companyContent as content } from './Company-content';
+import { companyContent as content } from './company.content';
 import { animIU, animI } from '../../helpers/Constants';
 
 

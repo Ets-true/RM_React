@@ -1,5 +1,5 @@
 import React from 'react'
-import './notFound.scss'
+import './not-found.style.scss'
 import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
 

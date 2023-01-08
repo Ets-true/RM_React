@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import arrow from '../../media/icons/arrow_white.svg'
-import './company.scss'
+import './company.style.scss'
 import { HashLink } from 'react-router-hash-link';
 
 

@@ -1,336 +1,256 @@
 @import "../../scss/mixin.scss";
 
-.economic{
-    background-color: #FFFFFA;
-    overflow: hidden;
-
+.economic {
+  background-color: #FFFFFA;
+  overflow: hidden;
 }
 
 .economic__economicBenefit {
-    width: 100%;
-    @include height(719);
-    @include paddingTop(65);
-    @include paddingLeft(278);
-    background-color: #FFFFFA;
+  width: 100%;
+  @include height(719);
+  @include paddingTop(65);
+  @include paddingLeft(278);
+  background-color: #FFFFFA;
+  position: relative;
+  .economicBenefit__textTop {
+    @include marginTop(45);
+    @include width(1390);
+  }
+  .economicBenefit__textLeft {
+    @include width(455);
+  }
+  .economic__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include marginTop(45);
+    @include marginRight(140);
+    .economicBenefit__initData {
+      @include size(820, 324);
+      .initData__title {
+        @include marginTop(25);
+        @include marginLeft(48);
+      }
+      .initData__content {
+        @include marginTop(37);
+        @include size(814, 238);
+        @include borderRadius(15);
+        @include paddingTop(34);
+        box-shadow: 0px 0px 24px #00000029;
+        .initData__tezis {
+          display: flex;
+          &:nth-child(3) {
+            .initData__el {
+              @include width(590);
+            }
+          }
+          .initData__point {
+            @include size(8, 8);
+            @include borderRadius(4);
+            @include marginLeft(43);
+            @include marginTop(8);
+            background-color: black;
+          }
+          .initData__el {
+            @include marginLeft(45);
+            @include marginBottom(32);
+            @include width(660);
+          }
+        }
+      }
+    }
+  }
+}
+
+.compare__wrap {
+  background-color: #F8F9FA;
+  @include paddingTop(35);
+  .compare__title {
+    @include marginLeft(278);
+  }
+  .compare__columnNames {
+    font-family: Montserrat-Regular;
+    @include fontSize(15);
+    @include marginTop(41);
+    color: #888888;
     position: relative;
-    .economicBenefit__textTop {
-        @include marginTop(45);
-        @include width(1390);
+    .columnName{
+      position: absolute;
+      top: 0;
+      &:nth-child(1){
+        @include left(548);
+      }
+      &:nth-child(2){
+        @include left(1100);
+      }
+      &:nth-child(3){
+        @include left(1365);
+      }
     }
-    .economicBenefit__textLeft{
-        @include width(455);
-    }
-    .economic__wrapper{
-        display: flex;
-        justify-content: space-between;
-        @include marginTop(45);
-        @include marginRight(140);
-        .economicBenefit__initData {
-            @include size(820,324);
-            .initData__title {
-                @include marginTop(25);
-                @include marginLeft(48);
-            }
-            .initData__content {
-                @include marginTop(37);
-                @include size(814,238);
-                @include borderRadius(15);
-                @include paddingTop(34);
-                box-shadow: 0px 0px 24px #00000029;
-                .initData__tezis{
-                    display: flex;
-                    &:nth-child(3){
-                        .initData__el{
-                            @include width(590);
-                        }
-                    }
-                    .initData__point{
-                        @include size(8,8);
-                        @include borderRadius(4);
-                        @include marginLeft(43);
-                        @include marginTop(8);
-                        background-color: black;
-                    }
-                    .initData__el{
-                        @include marginLeft(45);
-                        @include marginBottom(32);
-                        @include width(660);
-                    }
-                }
-            }
-        }
-    }
-
-}
-
-
-
-
-
-.economic__companyA, .economic__companyB {
-    width: 100%;
-    @include height(892);
-    background-color:#F8F9FA;
-    @include paddingTop(35);
-    .companyA__title {
-        @include marginLeft(278);
-    }
-    .companyA__columnNames {
-        font-family: Montserrat-Regular;
-        @include fontSize(15);
-        @include marginTop(41);
-        color: #888888;
+  }
+  .company__table {
+      position: relative;
+      @include marginBottom(100);
+      .company__left {
+        position: absolute;
+        @include top(240);
+        @include left(140);
+      }
+      .company__right {
+        position: absolute;
+        @include top(40);
+        @include left(416);
+        @include size(1485, 460);
+        @include paddingTop(35);
         position: relative;
-        .columnNames__action {
-            position: absolute;
-            top: 0;
-            @include left(548);
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 2px;
+          max-height: 100%;
+          border-radius: inherit;
+          background: linear-gradient(to bottom, black 0%, #F27300 60%);
         }
-        .columnNames__time {
-            position: absolute;
-            top: 0;
-            @include left(1100);
-        }
-        .columnNames__cost {
-            position: absolute;
-            top: 0;
-            @include left(1365);
-        }
-    }
-    .company__wrapper {
-        position: relative;
-        @include marginBottom(100);
-        .company__left {
-            position: absolute;
-            @include top(240);
-            @include left(140);
-        }
-        .company__right {
-            position: absolute;
-            @include top(40);
-            @include left(416);
-            @include size(1485,460);
-            @include paddingTop(35);
-            position: relative;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0; right: 0; bottom: 0; left: 0;
-                width: 2px;
-                max-height: 100%;
-                border-radius: inherit;
-                background: linear-gradient(to bottom, black 0%, #F27300 60%);
+        .row {
+          display: flex;
+          @include marginLeft(128);
+          @include marginBottom(60);
+          height: auto;
+          .Col__tezis {
+            display: flex;
+            font-family: Montserrat-Bold;
+            @include width(495);
+            &:nth-child(2) {
+              @include width(239);
+              @include marginLeft(64);
             }
-            .row{
-                display: flex;
-                @include marginLeft(128);
-                @include marginBottom(60);
-                height: auto;
-                .Col__tezis{
-                    display: flex;
-                    font-family: Montserrat-Bold;
-                    @include width(495);
-                    &:nth-child(2){
-                        @include width(239);
-                        @include marginLeft(64);
-                    }
-                    &:nth-child(3){
-                        @include marginLeft(30);
-                    }
-                    @include fontSize(20);
-                    .Col__point{
-                        flex-shrink: 0;
-                        @include size(8,8);
-                        @include borderRadius(4);
-                        @include marginTop(10);
-                        background-color: black;
-                        margin-left: 0px;
-                    }
-                    .Col__el{
-                        @include marginLeft(15);
-                    }
-                }
-                // ._action{
-                //     @include width(495);
-                // }
+            &:nth-child(3) {
+              @include marginLeft(30);
             }
+            @include fontSize(20);
+            .Col__point {
+              flex-shrink: 0;
+              @include size(8, 8);
+              @include borderRadius(4);
+              @include marginTop(10);
+              background-color: black;
+              margin-left: 0px;
+            }
+            .Col__el {
+              @include marginLeft(15);
+            }
+          }
         }
+      }
+  }
+
+  .company__conclusion {
+    @include marginLeft(278);
+    &:nth-child(1){
+      background-color: red;
     }
-    .company__conclusion {
-        @include marginLeft(278);
-        .conclusion__text {
-            @include marginTop(45);
-        }
+    .conclusion__text {
+      @include marginTop(45);
+      @include width(1490);
     }
+  }
 }
-
-.economic__companyB {
-    height: auto;
-}
-
-
-
 
 .economic__final {
-    background-color:#F8F9FA;
-    @include paddingTop(207);
-    @include paddingLeft(270);
-    position: relative;
-    &:before{
+  background-color: #F8F9FA;
+  @include paddingTop(207);
+  @include paddingLeft(270);
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    @include top(-500);
+    @include left(450);
+    transform: rotate(45deg);
+    width: 70%;
+    height: 100%;
+    background-image: url(../../media/img/blot_blue.png);
+    background-position: center;
+    background-size: 100% 240%;
+    background-repeat: none;
+    opacity: 0.4;
+  }
+  .final__text {
+    @include width(1490);
+    @include marginTop(67);
+    @include paddingBottom(200);
+  }
+  .final__docs {
+    display: flex;
+    @include paddingBottom(217);
+    .docs__title {
+      font-family: "Montserrat-Bold";
+      @include fontSize(20);
+      position: relative;
+      @include marginRight(60);
+      @include width(265);
+      &::after {
         content: '';
         position: absolute;
-        @include top(-500);
-        @include left(450);
-        transform: rotate(45deg);
-        width: 70%;
-        height: 100%;
-        background-image: url(../../media/img/blot_blue.png) ;
-        background-position: center; 
-        background-size: 100% 240%;
-        background-repeat: none;
-        opacity: 0.4;
+        @include right(-38);
+        bottom: -50%;
+        @include size(2, 194);
+        background: linear-gradient(to bottom, black 0%, #F27300 60%);
+      }
     }
-    .final__text {
-        @include marginTop(67);
-        @include paddingBottom(200);
-    }
-    .final__docs{
-        display: flex;
-        @include paddingBottom(217);
-        .docs__title{
-            font-family: "Montserrat-Bold";
-            @include fontSize(20);
-            position: relative;
-            @include marginRight(60);
-            &::after{
-                content: '';
-                position: absolute;
-                @include right(-38);
-                bottom: -50%;
-                @include size(2,194);
-                background: linear-gradient(to bottom, black 0%, #F27300 60%);
-            }
+    .docs__example {
+      text-align: center;
+      @include marginLeft(83);
+      z-index: 100;
+      a {
+        transition: all 0.2s;
+        color: black;
+        &:hover {
+          color: #F27300;
         }
-        .docs__example{
-            text-align: center;
-            @include marginLeft(83);
-            z-index: 100;
-            a{
-                transition: all 0.2s;
-                color: black;
-                &:hover{
-                    color: #F27300;
-                }
-            }
-            .example__icon{
-                margin: auto;
-                @include size(39,44);
-            }
-            .example__name{
-                font-family: "Montserrat-Regular";
-                @include fontSize(20);
-                @include marginTop(15);
-            }
-        }
+      }
+      .example__icon {
+        margin: auto;
+        @include size(39, 44);
+      }
+      .example__name {
+        font-family: "Montserrat-Regular";
+        @include fontSize(20);
+        @include marginTop(15);
+      }
     }
+  }
 
 }
 
-a{
-    text-decoration: none;
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-.attantion__mobile{
+.attantion__mobile {
+  display: none;
+}
+
+@media(max-width: 768px) {
+  .economic {
     display: none;
+  }
+
+  .attantion__mobile {
+    display: block;
+    font-family: Montserrat-Bold;
+    font-size: 20px;
+    display: block;
+    width: 300px;
+    height: 700px;
+    margin: auto;
+    margin-top: 52px;
+    padding-top: 100px;
+    text-align: center;
+    opacity: 0.4;
+  }
 }
-
-@media(max-width: 768px){
-    .economic{
-        display: none;
-    }
-    .attantion__mobile{
-        display: block;
-        font-family: Montserrat-Bold;
-        font-size: 20px;
-        display: block;
-        width: 300px;
-        height: 700px;
-        margin: auto;
-        margin-top: 52px;
-        padding-top: 100px;
-        text-align: center;
-        opacity: 0.4;
-    }
-    
-    .economic__economicBenefit {
-        margin-top: 52px;
-        width: 100%;
-        height: auto;
-        padding-top: 61px;
-        padding-left: 27px;
-        position: relative;
-    }
-    
-    .economicBenefit__textTop {
-        margin-top: 30px;
-        width: 300px;
-    }
-    
-    .economic__wrapper{
-        display: block;
-        justify-content: space-between;
-        margin: auto;
-        margin-top: 30px;
-        
-    }
-    .economicBenefit__textLeft {
-    }
-    .economicBenefit__initData {
-        width: 100%;
-        height: auto;
-    }
-
-    .initData__title {
-        margin-top: 45px;
-        margin-left: 10px;
-    }
-    .initData__content {
-        margin: auto;
-        margin-top: 37px;
-        width: 300px;
-        height: 308px;
-        padding-top: 34px;
-    }
-    .initData__tezis{
-        display: flex;
-        
-    }
-    .initData__point{
-        width: 8px;
-        height: 8px;
-        border-radius: 4px;
-        background-color: black;
-        margin-left: 25px;
-        margin-top: 8px;
-    }
-    .initData__el{
-        margin-left: 20px;
-        margin-bottom: 32px;
-        width: 220px;
-        /* background-color: red; */
-    }
-
-    .economic__companyA {
-        width: 100%;
-        height: auto;
-        background-color:#F8F9FA;
-        padding-top: 35px;
-    }
-    .companyA__title {
-        margin-left: 37px;
-    }
-
-}
-
-
